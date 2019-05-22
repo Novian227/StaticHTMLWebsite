@@ -8,7 +8,6 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
     color: #222;
     background: #f7f5f0;
 }
@@ -168,12 +167,6 @@ h2 {
 
     main p {
         line-height: 1.6em;
-    }
-
-    footer {
-        font-size: 1.3em;
-        max-width: 1200px;
-        margin: 40px auto;
     }
 
 }

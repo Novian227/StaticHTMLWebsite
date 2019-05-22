@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/profile.css">
+    <link href="css/navbar.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
     <link href="css/all.css" rel="stylesheet">
     <script src="js/popper.min.js"></script>
@@ -45,15 +46,45 @@
 
 <body>
     <!-- NAVBARNYA GANTI DISINI CHOOOOOOO !-->
-    <nav class="navbar navbar-expand-sm justify-content-center" style="background-color: purple">
-        <ul class="navbar-nav">
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" style="color: white; font-size: 30px">INI NAMANYA NAVBAR</a>
-            </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#"><img src="images/logo-univ-amikom.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="font-weight: 600; font-size: 20px">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="font-weight: 600; font-size: 20px">Prodi <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-weight: 600; font-size: 20px;  display: block;">
+                        Contact
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Novian</a>
+                        <a class="dropdown-item" href="#">Choooo</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
     </nav>
     <!-- NAVBARNYA GANTI DISINI CHOOOOOOO !-->
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" style="color: purple">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Profil</li>
+            </ol>
+        </nav>
+    </div>
 
     <header class="main-header">
         <img src="images/logodepan.jpg" alt="logoamikom" class="profile-image" style="max-width: 50%; height: auto">
@@ -185,19 +216,19 @@
 
 
     <!-- FOOTERNYA GANTI DISINI CHOOOOOOO !-->
-    <nav class="navbar navbar-expand-sm justify-content-center" style="background-color: purple">
-        <ul class="navbar-nav">
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://twitter.com/Kooongggg" style="color: white; font-size: 30px">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
+
     <!-- FOOTERNYA GANTI DISINI CHOOOOOOO !-->
 
 </body>
 
+<footer class="container-fluid text-center">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Ini Footer</h3>
+            <br>
+            <h4>Namanya</h4>
+        </div>
+    </div>
+</footer>
 
 </html>

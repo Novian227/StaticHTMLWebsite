@@ -6,8 +6,9 @@
     <title>AMIKOM Prodi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
     <link href="css/all.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
     <script src="js/popper.min.js"></script>
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -22,18 +23,20 @@
             text-shadow: 0 0 3px white;
         }
 
-        .fa-dollar-sign {
+        .fa-money-bill {
             color: purple;
             text-shadow: 0 0 3px white;
         }
 
         .btn-secondary {
             background-color: orange;
+            font-weight: 500;
         }
 
         .btn-secondary:hover {
             background-color: darkorange;
         }
+
 
         .btn-secondary:not(:disabled):not(.disabled):active,
         .btn-secondary:not(:disabled):not(.disabled).active,
@@ -41,22 +44,61 @@
             background-color: orange;
         }
 
+        .container .dropdown .dropdown-menu a:hover {
+            color: #fff;
+            background-color: orange;
+            border-color: #fff;
+        }
+
     </style>
 
 </head>
 
 <body>
+
     <!-- NAVBARNYA GANTI DISINI CHOOOOOOO !-->
-    <nav class="navbar navbar-expand-sm justify-content-center" style="background-color: purple">
-        <ul class="navbar-nav">
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" style="color: white; font-size: 30px">INI NAMANYA NAVBAR</a>
-            </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#"><img src="images/logo-univ-amikom.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="font-weight: 600; font-size: 20px">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="font-weight: 600; font-size: 20px">Prodi <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-weight: 600; font-size: 20px;  display: block;">
+                        Contact
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Novian</a>
+                        <a class="dropdown-item" href="#">Choooo</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
     </nav>
     <!-- NAVBARNYA GANTI DISINI CHOOOOOOO !-->
-    <div class="container-fluid text-center h-50 d-inline-block" style="background-color: slategrey; min-height: 300px">
+
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" style="color: purple">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Prodi</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="container text-center" style="background-color: darkgray; min-height: 300px">
         <br>
         <h2 style="color: white">Prodi di AMIKOM</h2>
         <br>
@@ -70,9 +112,15 @@
                         Fakultas Ilmu Komputer
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Prodi D3-Teknik Informatika</a>
-                        <a class="dropdown-item" href="#">Prodi D3-Manajemen Informatika</a>
-                        <a class="dropdown-item" href="#">Prodi S1-Informatika</a>
+                        <a class="dropdown-item" href="#">D3-Teknik Informatika</a>
+                        <a class="dropdown-item" href="#">D3-Manajemen Informatika</a>
+                        <a class="dropdown-item" href="#">S1-Informatika</a>
+                        <a class="dropdown-item" href="#">S1-Sistem Informasi</a>
+                        <a class="dropdown-item" href="#">S1-Bachelor Information Technology</a>
+                        <a class="dropdown-item" href="#">S1-Bachelor Informatics</a>
+                        <a class="dropdown-item" href="#">S1-Bachelor Information System</a>
+                        <a class="dropdown-item" href="#">S1-Teknologi Informasi</a>
+                        <a class="dropdown-item" href="#">S1-Teknik Komputer</a>
                     </div>
                 </div>
             </div>
@@ -85,14 +133,14 @@
                         Fakultas Sains dan Teknologi
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Prodi D3-Teknik Informatika</a>
-                        <a class="dropdown-item" href="#">Prodi D3-Manajemen Informatika</a>
-                        <a class="dropdown-item" href="#">Prodi S1-Informatika</a>
+                        <a class="dropdown-item" href="#">S1-Arsitektur</a>
+                        <a class="dropdown-item" href="#">S1-Geografi</a>
+                        <a class="dropdown-item" href="#">S1-Perencanaan Wilayah dan kota</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
-                <i class="fa fa-dollar-sign fa-5x" aria-hidden="true"></i>
+                <i class="fa fa-money-bill fa-5x" aria-hidden="true"></i>
                 <br>
                 <br>
                 <div class="dropdown">
@@ -109,4 +157,54 @@
         </div>
     </div>
 
-    <div class="container-fluid" </body> </html>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Kenapa memilih kuliah di amikom ?</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vulputate odio id nibh aliquet, quis tristique neque feugiat. Nam finibus, ex dictum mattis convallis, ante est scelerisque neque, ut cursus tortor tellus id massa. Ut lobortis odio id tempus dignissim. Ut varius, lacus non sodales dictum, sapien lacus auctor</p>
+
+                <p>Cras bibendum, justo non faucibus tempus, lacus mauris molestie odio, vitae auctor felis mauris sed magna. Ut dui purus, pharetra nec turpis et, tincidunt facilisis ante. Nullam faucibus, felis et accumsan volutpat, dolor arcu laoreet elit, tempus maximus libero tellus non risus. Donec commodo, enim sed luctus vulputate, mi tortor vulputate dolor, ut mattis ante ligula id erat. Aliquam eget nunc sit amet ex mattis bibendum.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="images/prodi1.jpg" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <h4>D3 TI</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vulputate odio id nibh aliquet, quis tristique neque feugiat. Nam finibus, ex dictum mattis convallis, ante est scelerisque neque, ut cursus tortor tellus id massa.</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <img src="images/gYHXlfIa_400x400.jpg" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <h4>D3 TI</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vulputate odio id nibh aliquet, quis tristique neque feugiat. Nam finibus, ex dictum mattis convallis, ante est scelerisque neque, ut cursus tortor tellus id massa.</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <img src="images/gYHXlfIa_400x400.jpg" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="container-fluid text-center">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Ini Footer</h3>
+                <br>
+                <h4>Namanya</h4>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
