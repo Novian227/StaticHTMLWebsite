@@ -1,0 +1,64 @@
+        .fa-desktop {
+            color: purple;
+            text-shadow: 0 0 5px white;
+        }
+
+        .fa-flask {
+            color: purple;
+            text-shadow: 0 0 5px white;
+        }
+
+        .fa-money-bill {
+            color: purple;
+            text-shadow: 0 0 5px white;
+        }
+
+        .fa-facebook-f {
+            text-decoration: none;
+            color: white;
+        }
+
+        .fa-facebook-f:hover {
+            text-decoration: none;
+            color: gray;
+        }
+
+        .fa-twitter {
+            text-decoration: none;
+            color: white;
+        }
+
+        .fa-twitter:hover {
+            text-decoration: none;
+            color: gray;
+        }
+
+        .fa-instagram {
+            text-decoration: none;
+            color: white;
+        }
+
+        .fa-instagram:hover {
+            text-decoration: none;
+            color: gray;
+        }
+
+        .fa-youtube {
+            text-decoration: none;
+            color: white;
+        }
+
+        .fa-youtube:hover {
+            text-decoration: none;
+            color: gray;
+        }
+
+        .fa-steam {
+            text-decoration: none;
+            color: white;
+        }
+
+        .fa-steam:hover {
+            text-decoration: none;
+            color: gray;
+        }

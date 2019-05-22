@@ -21,6 +21,20 @@
         footer {
             width: 100%;
             background-color: #482C79;
-            padding: 5%;
+            padding: 3.5%;
             color: white;
+        }
+
+        .footer > ul > li > a {
+            text-decoration: none;
+        }
+
+        .nodecoration {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nodecoration:hover {
+            color: lightgray;
+            text-decoration: none;
         }
