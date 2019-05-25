@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>AMIKOM Prodi</title>
+    <title>Prodi</title>
+    <link rel="icon" type="image/png" href="other/gbr/ico.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link href="css/all.css" rel="stylesheet">
@@ -14,6 +15,14 @@
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/bootstrap.js"></script>
     <style>
+        body {
+            background-color: #cc99ff;
+        }
+
+        body .container {
+            background-color: #e9ecef;
+        }
+
         .btn-secondary {
             background-color: orange;
             font-weight: 500;
@@ -146,6 +155,121 @@
             }
         }
 
+        /* Navbar style Choirul harus dicopy tiap page */
+
+        .bg-ungu {
+            background-color: #502763;
+        }
+
+        .transbox {
+            text-align: left;
+            width: 100%;
+            padding: 5px 5px 5px 15px;
+            background-color: #ffffff;
+            border: none;
+            opacity: 0.6;
+            filter: alpha(opacity=60);
+            /* For IE8 and earlier */
+        }
+
+        .transbox h3 {
+            padding: none;
+            font-weight: bold;
+        }
+
+        .transbox p {
+            padding: none;
+            font-weight: bold;
+        }
+
+        .carousel-caption {
+            position: left-side;
+            left: 0;
+        }
+
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+            background-color: gray;
+        }
+
+        .dropdown>.dropdown-toggle:active {
+            /*Without this, clicking will make it sticky*/
+            pointer-events: none;
+        }
+
+        < !-- CSS FORM LOGIN -->
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            bottom: 23px;
+            right: 28px;
+            width: 180px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+            border: 1px;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: red;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+
     </style>
 
 </head>
@@ -153,45 +277,79 @@
 <body>
 
     <!-- NAVBARNYA GANTI DISINI CHOOOOOOO !-->
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <a class="navbar-brand" href="#"><img src="images/logo-univ-amikom.png"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark ml-auto bg-ungu">
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#" style="font-weight: 600; font-size: 20px">Home </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="prodi.html" style="font-weight: 600; font-size: 20px">Prodi <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html" style="font-weight: 600; font-size: 20px">Profil <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-weight: 600; font-size: 20px;  display: block;">
-                        Contact
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Novian</a>
-                        <a class="dropdown-item" href="#">Choooo</a>
-                    </div>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
+            <a class="navbar-brand col-md-3" href="./index.html"><img class="img-fluid" src="other/gbr/logo2.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <nav class="collapse navbar-collapse col-md-9 sticky-top" id="navbarSupportedContent">
+                <div class="col-md-8">
+                    <ul class=" navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./index.html">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./profil.html">PROFIL</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="./prodi.html" id="navbardrop" data-toggle="dropdown">
+                                FAKULTAS
+                            </a>
+                            <div class="dropdown-menu ungu">
+                                <a class="dropdown-item" href="#">
+                                    <h6>Fakultas Ilmu Komputer(FIK) </h6>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <h6>Fakutas Sain dan Teknologi(FST)</h6>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <h6>Fakultas Ekonomi dan Sosial(FES)</h6>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">AWARDS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">PENDAFTARAN</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-md-4 ">
+                    <h5 style="color:white;">Login As :
+                        <a onclick="openForm()"><img src="other/gbr/mhs.png" width="40px" height="40px" alt="Mahasiswa"></a>
+                        <a onclick="openForm()"><img src="other/gbr/dosen.png" width="50px" height="50px" alt="Staff/Dosen"></a></h5>
+
+                    <!-- -->
+                </div>
+
+            </nav>
+
+
+        </nav>
+    </header>
+    <div class="form-popup mr-auto" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <label for="email"><b>Email</b></label><br>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
     <!-- NAVBARNYA GANTI DISINI CHOOOOOOO !-->
 
     <div class="container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#" style="color: purple">Home</a></li>
+                <li class="breadcrumb-item"><a href="./index.html" style="color: purple">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Prodi</li>
             </ol>
         </nav>
@@ -260,8 +418,9 @@
     </div>
 
     <br>
-    <br>
+
     <div class="container">
+        <br>
         <div class="row">
             <div class="col-md-6">
                 <h4>Kenapa memilih kuliah di amikom ?</h4>
@@ -309,10 +468,8 @@
         </div>
     </div>
 
-    <br>
-
-
     <div class="container">
+        <br>
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <h4>Tenaga Pengajar</h4>
@@ -374,10 +531,10 @@
     </footer>
     <footer class="container-fluid" style="background-color: #311e54; padding: 1%">
         <div class="logo-footer">
-            <div class="container logo-footer">
+            <div class="logo-footer">
                 <div class="row">
                     <div class="col-sm-6 text-left">
-                        <a href="http://www.amikom.ac.id/"><img src="http://www.amikom.ac.id/template/newamikom/images/logo-footer-univ.png" alt="" style="margin-left: 1px"></a>
+                        <a href="./index.html"><img src="./images/logo-footer-univ.png" alt="" style="margin-left: 195px"></a>
                     </div>
                     <div class="col-sm-6 text-right" style="margin-left: 470px; margin-top: -30px">
                         <div class="social">
@@ -392,6 +549,16 @@
             </div>
         </div>
     </footer>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+    </script>
 </body>
 
 </html>
