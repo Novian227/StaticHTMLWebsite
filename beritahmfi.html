@@ -3,50 +3,69 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Prodi</title>
-    <link rel="icon" type="image/png" href="other/gbr/ico.png">
+    <title>Berita Acara Upgrading 1 HMIF 2019</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link href="css/all.css" rel="stylesheet">
     <link href="css/navbar.css" rel="stylesheet">
     <link href="css/fa-custom.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+    <link rel="icon" type="image/png" href="other/gbr/ico.png">
+
     <script src="js/popper.min.js"></script>
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/bootstrap.js"></script>
+
     <style>
         body {
             background-color: #cc99ff;
         }
 
         body .container {
-            background-color: #e9ecef;
-        }
-
-        .btn-secondary {
-            background-color: orange;
-            font-weight: 500;
-            border-color: orange;
-        }
-
-        .btn-secondary:hover {
-            background-color: darkorange;
-            border-color: darkorange;
+            background-color: #f2e6ff;
         }
 
 
-        .btn-secondary:not(:disabled):not(.disabled):active,
-        .btn-secondary:not(:disabled):not(.disabled).active,
-        .show>.btn-secondary.dropdown-toggle {
-            background-color: orange;
+        .container {
+            margin: 0 auto;
         }
 
-        .container .dropdown .dropdown-menu a:hover {
-            color: #fff;
-            background-color: orange;
-            border-color: #fff;
+        #content {
+            /*border: 2px solid orange; */
+            padding: 18px;
+            margin-left: 250px;
+            min-height: 1200px;
+            color: darkgrey;
         }
 
+        #sidebar {
+            float: left;
+            width: 245px;
+            color: #ffbdbd;
+            will-change: min-height;
+        }
+
+        #sidebar .sidebar__inner {
+            border: 1px solid orange;
+            padding: 10px;
+            position: relative;
+            transform: translate(0, 0);
+            transform: translate3d(0, 0, 0);
+            will-change: position, transform;
+        }
+
+        .clearfix:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Style the Image Used to Trigger the Modal */
         #myImg {
             border-radius: 5px;
             cursor: pointer;
@@ -81,15 +100,15 @@
             /* Black w/ opacity */
         }
 
-        /* Modal Content (image) */
+        /* Modal Content (Image) */
         .modal-content {
             margin: auto;
             display: block;
-            width: 80%;
-            max-width: 700px;
+            height: auto;
+            max-width: 75%;
         }
 
-        /* Caption of Modal Image */
+        /* Caption of Modal Image (Image Text) - Same Width as the Image */
         #caption {
             margin: auto;
             display: block;
@@ -101,23 +120,11 @@
             height: 150px;
         }
 
-        /* Add Animation */
+        /* Add Animation - Zoom in the Modal */
         .modal-content,
         #caption {
-            -webkit-animation-name: zoom;
-            -webkit-animation-duration: 0.6s;
             animation-name: zoom;
             animation-duration: 0.6s;
-        }
-
-        @-webkit-keyframes zoom {
-            from {
-                -webkit-transform: scale(0)
-            }
-
-            to {
-                -webkit-transform: scale(1)
-            }
         }
 
         @keyframes zoom {
@@ -154,8 +161,6 @@
                 width: 100%;
             }
         }
-
-        /* Navbar style Choirul harus dicopy tiap page */
 
         .bg-ungu {
             background-color: #502763;
@@ -271,7 +276,6 @@
         }
 
     </style>
-
 </head>
 
 <body>
@@ -280,7 +284,7 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark ml-auto bg-ungu">
 
-            <a class="navbar-brand col-md-3" href="./index.html"><img class="img-fluid" src="other/gbr/logo2.png"></a>
+            <a class="navbar-brand col-md-3" href="#"><img class="img-fluid" src="other/gbr/logo2.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -295,17 +299,17 @@
                             <a class="nav-link" href="./profil.html">PROFIL</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="./prodi.html" id="navbardrop" data-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                                 FAKULTAS
                             </a>
                             <div class="dropdown-menu ungu">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="./prodi.html">
                                     <h6>Fakultas Ilmu Komputer(FIK) </h6>
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="./prodi.html">
                                     <h6>Fakutas Sain dan Teknologi(FST)</h6>
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="./prodi.html">
                                     <h6>Fakultas Ekonomi dan Sosial(FES)</h6>
                                 </a>
                             </div>
@@ -350,147 +354,86 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./index.html" style="color: purple">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Prodi</li>
+                <li class="breadcrumb-item"><a href="#" style="color: purple">Berita</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Berita Acara Upgrading 1 HMIF 2019</li>
             </ol>
         </nav>
+
     </div>
 
-    <div class="container text-center" style="background-color: darkgray; min-height: 300px">
-        <br>
-        <h2 style="color: white; text-shadow: 0 0 3px black;">Prodi di AMIKOM</h2>
-        <br>
-        <div class="row">
-            <div class="col-lg-4">
-                <i class="fa fa-desktop fa-5x" aria-hidden="true"></i>
-                <br>
-                <br>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Fakultas Ilmu Komputer
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">D3-Teknik Informatika</a>
-                        <a class="dropdown-item" href="#">D3-Manajemen Informatika</a>
-                        <a class="dropdown-item" href="#">S1-Informatika</a>
-                        <a class="dropdown-item" href="#">S1-Sistem Informasi</a>
-                        <a class="dropdown-item" href="#">S1-Bachelor Information Technology</a>
-                        <a class="dropdown-item" href="#">S1-Bachelor Informatics</a>
-                        <a class="dropdown-item" href="#">S1-Bachelor Information System</a>
-                        <a class="dropdown-item" href="#">S1-Teknologi Informasi</a>
-                        <a class="dropdown-item" href="#">S1-Teknik Komputer</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <i class="fa fa-flask fa-5x" aria-hidden="true"></i>
-                <br>
-                <br>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Fakultas Sains dan Teknologi
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">S1-Arsitektur</a>
-                        <a class="dropdown-item" href="#">S1-Geografi</a>
-                        <a class="dropdown-item" href="#">S1-Perencanaan Wilayah dan kota</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <i class="fa fa-money-bill fa-5x" aria-hidden="true"></i>
-                <br>
-                <br>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Fakultas Ekonomi dan Sosial
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">S1 Ekonomi</a>
-                        <a class="dropdown-item" href="#">S1-Kewirausahaan</a>
-                        <a class="dropdown-item" href="#">S1-Akuntansi</a>
-                        <a class="dropdown-item" href="#">S1-Ilmu Pemerintahan</a>
-                        <a class="dropdown-item" href="#">S1-Hubungan Internasional</a>
-                        <a class="dropdown-item" href="#">S1-Ilmu Komunikasi</a>
-                    </div>
-                </div>
+
+    <div class="container clearfix">
+        <div id="sidebar">
+            <div class="sidebar__inner">
+                <p style="color: #482373; font-size: 25px">Info Kampus</p>
+                <hr>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Drama Musikal IKNA 2019 #2</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Festival Film Mahasiswa Indonesia (FFMI) 2019</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Recruitment Student Staff Direktorat Perencanaan dan Keuangan (DPK) Universitas Amikom Yogyakarta</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Pengumuman Pendaftaran Wisuda Periode ke - 71</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Pengumuman Penjelasan Wisuda Periode ke - 71</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Recruitment Student Staff Direktorat BPC Universitas Amikom Yogyakarta 2019</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Pengumuman Perpanjangan Pendaftaran Beasiswa Mahasiswa Berprestasi 2019</p>
+                </a>
             </div>
         </div>
-    </div>
 
-    <br>
+        <div id="content">
+            <h3 style="color: #482373">Berita Acara Upgrading 1 HMIF 2019</h3>
+            <i style="margin-left: 3px; color: #757575; font-size: 14px" class="far fa-clock"> 30 Februari 2019. diposting oleh noviana</i>
+            <hr>
 
-    <div class="container">
-        <br>
-        <div class="row">
-            <div class="col-md-6">
-                <h4 style="color: darkorange">Kenapa memilih kuliah di amikom ?</h4>
-                <p>Visi STIMIK AMIKOM menjadi perguruan tinggi dunia yang unggul dalam bidang teknologi informasi dan komunikasi yang berbasis entrepreneursip.</p>
-                <p>Hal ini juga telah mendapat pengakuan oleh UNESCO sebagai Private Entrepreneurial Model University. Tidak hanya pengetahuan dan keahlian dalam bidang teknologi, mahasiswa juga dibekali ilmu etrepreneurship agar mahasiswa bisa menjadi pebisnis yang mampu bersaing secara global.</p>
+            <img id="myImg" src="images/IMG-20190330-WA0015jpg.jpg" alt="Peserta HMIF edisi pertama sedang ber-group photo">
 
-                <p>Sebelum memasuki kuliah yang sesungguhnya, para mahaisiswa dibekali pendidikan sikap mental profesional (Pelatihan Super Unggul). Agar mahasiswa termotivasi untuk meraih cita-citanya, percaya diri, mengenali jati diri sendiri yang sebenarnya, memiliki kemampuan empati dan sosial.</p>
-            </div>
-            <div class="col-md-6">
-                <img id="myImg" src="images/prodi1.jpg" class="img-fluid">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <p>Saat ini STMIK AMIKOM mengelola 4 Jurusan dengan 4 Program studi dan beberapa konsentrasi peminatan studi di masing masing program studi yaitu: </p>
+            <hr>
 
-                <h5 style="color: darkorange">Program Diploma-3 (D3)</h5>
-                <h6>A. Jurusan Manajemen Informatika yaitu:</h6>
-                <p>1. E-Commerce (Bisnis Lewat Internet)</p>
-                <p>2. Sistem Informasi Berbasis Multimedia</p>
-                <p>3. Komputerisasi Akuntansi</p>
-                <p>4. Jaringan Komputer</p>
-            </div>
-            <div class="col-md-6">
-                <img id="myImg" src="images/prodi2.png" class="img-fluid">
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-md-6">
-                <h5 style="color: darkorange">Program Sarjana-1 (S1)</h5>
-                <h6>A. Jurusan Sistem Informasi yaitu:</h6>
-                <p>1. E-Commerce</p>
-                <p>2. Sistem Informasi Berbasis Multimedia</p>
-                <p>3. Komputerisasi Akuntansi</p>
-                <p>4. Broadcasting TV </p>
+            <p style="color: #333333; font-size: 14px">Himpunan Mahasiswa Informatika (HMIF) Universitas Amikom Yogyakarta menyelenggarakan kegiatan Upgrading 1 yang ditujukan untuk kader HMIF dengan mengangkat tema "Meningkatkan Pribadi Yang Kritis melalui Sikap Profesional sehingga Loyal dalam Berorganisasi".</p>
 
-                <h6>B. Jurusan Teknik Informatika yaitu:</h6>
-                <p>1. Multimedia dan Periklanan Televisi</P>
-                <p>2. Pemrograman Internet</p>
-            </div>
-            <div class="col-md-6">
-                <img id="myImg" src="images/prodi3.jpg" class="img-fluid">
-            </div>
+            <p style="color: #333333; font-size: 14px">Acara ini diadakan selama 3 hari yaitu pada :<br><br>
+                Hari : Senin - Rabu<br>
+                Tanggal : 18 Maret 2019 - 20 Maret 2019<br>
+
+                Pukul : 17.30 – 20.00 WIB<br>
+
+                Tempat : Ruang BSC Universitas AMIKOM Yogyakarta</p>
+
+            <p style="color: #333333; font-size: 14px">Kegiatan ini merupakan media dan bekal bagi kader untuk menjalani dan menghadapi dalam lingkungan organisasi maupun luar. Dalam kegiatanya terlihat antusiasme para peserta dalam mengikuti kegiatan upgrading 1 sangat tinggi, karena dalam kegiatan ini, bukan hanya transfer knowledge dan ilmu pengetahuan tapi juga sharing bersama para pembiacara,Dewan Alumni,Dewan Penasihat,maupun Anggota Pengurus, maupun Pengurus Inti.</p>
+
+
+            <p style="color: #333333; font-size: 14px">bukan hanya itu acara Upgrading 1 ini bukan hanya dikhususkan untuk kader saja tetapi setelah itu diadakan juga upgrading 2 yang dikhususkan untuk Anggota Pengurus yang baru saja naik tingkatan dari kader menjadi anggota pengurus,
+            </p>
+
+            <p style="color: #333333; font-size: 14px">semoga dengan diadakan kegiatan upgrading 1 dapat berguna dan dapat meningkatkan kualitas peserta yang hadir dan dapat direalisasikan dalam berbagai aspek kehidupan khususnya dalam berorganisasi.
+
+            </p>
+
         </div>
     </div>
 
-    <div class="container">
-        <br>
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <h4 style="color: darkorange">Tenaga Pengajar</h4>
-                <p>Sebagai sekolah tinggi di bidang informatika, proses belajar mengajar di AMIKOM di
-                    dukung oleh tenaga pengajar yang berkualitas. Adapun tenaga pengajar yang
-                    berperan didalam proses belajar mengajar di STMIK AMIKOM terdiri dari Dosen dan
-                    Asisten.</p>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <img src="images/gYHXlfIa_400x400.jpg" class="img-fluid">
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <h4 style="color: darkorange">Organisasi Kemahasiswaan</h4>
-                <p>Organisasi Kemahasiswaan adalah kegiatan kemahasiswaan yang bersifat non
-                    akademik dan merupakan kegiatan ekstra kurikuler yang bertujuan untuk menyalurkan
-                    minat dan bakat, penalaran dan keilmuan</p>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <img src="images/amcc-logo.png" class="img-fluid">
-            </div>
-        </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
     </div>
 
 
@@ -549,6 +492,9 @@
             </div>
         </div>
     </footer>
+
+
+    <script src="js/sticky-sidebar.min.js"></script>
     <script>
         function openForm() {
             document.getElementById("myForm").style.display = "block";
@@ -558,7 +504,37 @@
             document.getElementById("myForm").style.display = "none";
         }
 
+        var a = new StickySidebar('#sidebar', {
+            topSpacing: 20,
+            bottomSpacing: 20,
+            containerSelector: '.container',
+            innerWrapperSelector: '.sidebar__inner'
+        });
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
     </script>
+
+
 </body>
 
 </html>
