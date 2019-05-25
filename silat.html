@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pencak Silat Amikom Raih 9 Medali di YKTC 5 2019</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="css/all.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/fa-custom.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+    <link rel="icon" type="image/png" href="other/gbr/ico.png">
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <style>
+        body {
+            background-color: #cc99ff;
+        }
+
+        body .container {
+            background-color: #f2e6ff;
+        }
+
+
+        .container {
+            margin: 0 auto;
+        }
+
+        #content {
+            /*border: 2px solid orange; */
+            padding: 18px;
+            margin-left: 250px;
+            min-height: 1200px;
+            color: darkgrey;
+        }
+
+        #sidebar {
+            float: left;
+            width: 245px;
+            color: #ffbdbd;
+            will-change: min-height;
+        }
+
+        #sidebar .sidebar__inner {
+            border: 1px solid orange;
+            padding: 10px;
+            position: relative;
+            transform: translate(0, 0);
+            transform: translate3d(0, 0, 0);
+            will-change: position, transform;
+        }
+
+        .clearfix:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Style the Image Used to Trigger the Modal */
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (Image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            height: auto;
+            max-width: 75%;
+        }
+
+        /* Caption of Modal Image (Image Text) - Same Width as the Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation - Zoom in the Modal */
+        .modal-content,
+        #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        .bg-ungu {
+            background-color: #502763;
+        }
+
+        .transbox {
+            text-align: left;
+            width: 100%;
+            padding: 5px 5px 5px 15px;
+            background-color: #ffffff;
+            border: none;
+            opacity: 0.6;
+            filter: alpha(opacity=60);
+            /* For IE8 and earlier */
+        }
+
+        .transbox h3 {
+            padding: none;
+            font-weight: bold;
+        }
+
+        .transbox p {
+            padding: none;
+            font-weight: bold;
+        }
+
+        .carousel-caption {
+            position: left-side;
+            left: 0;
+        }
+
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+            background-color: gray;
+        }
+
+        .dropdown>.dropdown-toggle:active {
+            /*Without this, clicking will make it sticky*/
+            pointer-events: none;
+        }
+
+        < !-- CSS FORM LOGIN -->
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            bottom: 23px;
+            right: 28px;
+            width: 180px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+            border: 1px;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: red;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBARNYA GANTI DISINI CHOOOOOOO !-->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark ml-auto bg-ungu">
+
+            <a class="navbar-brand col-md-3" href="#"><img class="img-fluid" src="other/gbr/logo2.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <nav class="collapse navbar-collapse col-md-9 sticky-top" id="navbarSupportedContent">
+                <div class="col-md-8">
+                    <ul class=" navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./index.html">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./profil.html">PROFIL</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                FAKULTAS
+                            </a>
+                            <div class="dropdown-menu ungu">
+                                <a class="dropdown-item" href="./prodi.html">
+                                    <h6>Fakultas Ilmu Komputer(FIK) </h6>
+                                </a>
+                                <a class="dropdown-item" href="./prodi.html">
+                                    <h6>Fakutas Sain dan Teknologi(FST)</h6>
+                                </a>
+                                <a class="dropdown-item" href="./prodi.html">
+                                    <h6>Fakultas Ekonomi dan Sosial(FES)</h6>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">AWARDS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">PENDAFTARAN</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-md-4 ">
+                    <h5 style="color:white;">Login As :
+                        <a onclick="openForm()"><img src="other/gbr/mhs.png" width="40px" height="40px" alt="Mahasiswa"></a>
+                        <a onclick="openForm()"><img src="other/gbr/dosen.png" width="50px" height="50px" alt="Staff/Dosen"></a></h5>
+
+                    <!-- -->
+                </div>
+
+            </nav>
+
+
+        </nav>
+    </header>
+    <div class="form-popup mr-auto" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <label for="email"><b>Email</b></label><br>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- NAVBARNYA GANTI DISINI CHOOOOOOO !-->
+
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html" style="color: purple">Home</a></li>
+                <li class="breadcrumb-item"><a href="#" style="color: purple">Berita</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Pencak Silat Amikom Raih 9 Medali di YKTC 5 2019</li>
+            </ol>
+        </nav>
+
+    </div>
+
+
+    <div class="container clearfix">
+        <div id="sidebar">
+            <div class="sidebar__inner">
+                <p style="color: #482373; font-size: 25px">Info Kampus</p>
+                <hr>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Drama Musikal IKNA 2019 #2</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Festival Film Mahasiswa Indonesia (FFMI) 2019</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Recruitment Student Staff Direktorat Perencanaan dan Keuangan (DPK) Universitas Amikom Yogyakarta</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Pengumuman Pendaftaran Wisuda Periode ke - 71</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Pengumuman Penjelasan Wisuda Periode ke - 71</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Recruitment Student Staff Direktorat BPC Universitas Amikom Yogyakarta 2019</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Pengumuman Perpanjangan Pendaftaran Beasiswa Mahasiswa Berprestasi 2019</p>
+                </a>
+            </div>
+        </div>
+
+        <div id="content">
+            <h3 style="color: #482373">Pencak Silat Amikom Raih 9 Medali di YKTC 5 2019</h3>
+            <i style="margin-left: 3px; color: #757575; font-size: 14px" class="far fa-clock"> 20 Maret 2019. diposting oleh rezzha</i>
+            <hr>
+
+            <img id="myImg" src="images/PENCAK_SILAT_AMIKOMjpg.jpg" alt="Peserta HMIF edisi pertama sedang ber-group photo">
+
+            <hr>
+
+            <p style="color: #333333; font-size: 14px"> Dalam kejuaraan Pencak silat Tingkat nasional  ini pencak silat (PSHT) amikom mengirimkan 9 atlit fight yang dilaksanakan pada tanggal 12-13 Maret 2019 di Sportorium UMY yang diikuti oleh berbagai universitas dan atlet non universitas dengan jumlah peserta 2476 atlit.</p>
+
+            <p style="color: #333333; font-size: 14px">Puji syukur kami panjatkan kehadirat tuhan karena berkatnya kami dapat meraih 1 Medali Emas, 1 Medali Perak dan 7 Medali Perunggu.</p>
+
+            <p style="color: black; font-size: 14px"><h6>Male Class (Fight)</h6>
+  				<ul>
+    				<li>Fachrus Khafifi (Perak) – B Class</li>
+    				<li>Khodriyansyah (Perunggu) – C Class</li>
+    				<li>Zakarias Nofli (Perunggu) – C Class</li>
+   					<li>Yusuf Widiyanto (Perunggu) – A Class</li>
+    				<li>Syahrifal (Perunggu) – B Class</li>
+  				</ul>
+			
+            <p style="color: #000000; font-size: 14px"><h6>Female Class (Fight)</h6>
+  				<ul>
+    				<li>Lilis Senjawati (Emas) – B Class</li>
+    				<li>Lailatul Syadiah (Perunggu) – A Class</li>
+    				<li>Baiq Nindy (Perunggu) - Class</li>
+   					<li>Khadidatus (Perunggu) – A Class</li>
+  				</ul>
+
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+
+
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <h2 style="font-size: 14px; font-weight: 600; margin-left: 200px">Copyright © 2019</h2>
+                <p style="font-size: 13px; margin-left: 200px">UNIVERSITAS AMIKOM YOGYAKARTA<br>All right reserved</p>
+            </div>
+            <div class="col-sm-4">
+                <h2 style="font-size: 14px; font-weight: 600; margin-left: 15px">Menu</h2>
+                <div class="col-md-6">
+                    <ul class="list-unstyled sitemaplink">
+                        <li style="font-size: 13px; margin-right: 40px; color: white; margin: 0 0 5px 0"><a href="#" class="nodecoration">Sitemap</a></li>
+                        <li style="font-size: 13px; margin-right: 40px; color: white; margin: 0 0 5px 0"><a href="#" class="nodecoration">Contact</a></li>
+                        <li style="font-size: 13px; margin-right: 40px; color: white; margin: 0 0 5px 0"><a href="#" class="nodecoration">D3TI</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h2 style="font-size: 14px; font-weight: 600; margin-left: 40px">UNIVERSITAS AMIKOM YOGYAKARTA</h2>
+                <p style="font-size: 13px; margin-left: 40px">Kampus Terpadu : Jl. Ring Road Utara,<br>
+                    Condong Catur, Sleman, Yogyakarta<br>
+
+                    Telp: (0274) 884201 - 207<br>
+
+                    Fax: (0274) 884208 Kodepos: 55283<br>
+
+                    E-Mail: amikom@amikom.ac.id</p>
+                <h2 style="font-size: 14px; font-weight: 600; margin-left: 40px">International Office</h2>
+                <p style="font-size: 13px; margin-left: 40px">Telp: +62 274884 201 Ext. 612<br>
+
+                    Fax: +62 274884 208<br>
+
+                    E-Mail: io@amikom.ac.id</p>
+            </div>
+        </div>
+    </footer>
+    <footer class="container-fluid" style="background-color: #311e54; padding: 1%">
+        <div class="logo-footer">
+            <div class="logo-footer">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <a href="./index.html"><img src="./images/logo-footer-univ.png" alt="" style="margin-left: 195px"></a>
+                    </div>
+                    <div class="col-sm-6 text-right" style="margin-left: 470px; margin-top: -30px">
+                        <div class="social">
+                            <a href="https://www.facebook.com/fleetimee" style="text-decoration: none"><i class="fab fa-facebook-f fa-lg"></i>&nbsp;
+                                <a href="https://twitter.com/Kooongggg" style="text-decoration: none"><i class="fab fa-twitter fa-lg"></i>&nbsp;
+                                    <a href="https://www.instagram.com/kooonggggg/" style="text-decoration: none"><i class="fab fa-instagram fa-lg"></i>&nbsp;
+                                        <a href="https://www.youtube.com/channel/UC_CYJBNLjKMmr9XZ6m3oSpg?view_as=subscriber" style="text-decoration: none"><i class="fab fa-youtube fa-lg"></i>&nbsp;
+                                            <a href="https://steamcommunity.com/id/fleetime/" style="text-decoration: none"><i class="fab fa-steam fa-lg"></i>&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/sticky-sidebar.min.js"></script>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+        var a = new StickySidebar('#sidebar', {
+            topSpacing: 20,
+            bottomSpacing: 20,
+            containerSelector: '.container',
+            innerWrapperSelector: '.sidebar__inner'
+        });
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+    </script>
+
+
+</body>
+
+</html>
