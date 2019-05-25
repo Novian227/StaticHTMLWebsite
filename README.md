@@ -16,7 +16,7 @@ Ini adalah Tugas Perancangan Web Semester 2
 Kami menggunakan berbagai software open source untuk membangun web ini
 
 * [Bootstrap] - great UI boilerplate for modern web apps
-* [jQuery] - duh
+* [jQuery] -  The Write Less, Do More, JavaScript Library.
 * [FontAwesome] - Framework icon lengkap biar gak donlod donlod icon di web
 
 
