@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Award</title>
+    <link rel="icon" type="image/png" href="other/gbr/ico.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="css/all.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/fa-custom.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/imagehover.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+        body {
+            background-color: #cc99ff;
+        }
+
+        body .container {
+            background-color: #e9ecef;
+        }
+
+        /* Navbar style Choirul harus dicopy tiap page */
+
+        .bg-ungu {
+            background-color: #502763;
+        }
+
+        .transbox {
+            text-align: left;
+            width: 100%;
+            padding: 5px 5px 5px 15px;
+            background-color: #ffffff;
+            border: none;
+            opacity: 0.6;
+            filter: alpha(opacity=60);
+            /* For IE8 and earlier */
+        }
+
+        .transbox h3 {
+            padding: none;
+            font-weight: bold;
+        }
+
+        .transbox p {
+            padding: none;
+            font-weight: bold;
+        }
+
+        .carousel-caption {
+            position: left-side;
+            left: 0;
+        }
+
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+            background-color: gray;
+        }
+
+        .dropdown>.dropdown-toggle:active {
+            /*Without this, clicking will make it sticky*/
+            pointer-events: none;
+        }
+
+        < !-- CSS FORM LOGIN -->
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            bottom: 23px;
+            right: 28px;
+            width: 180px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+            border: 1px;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: red;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+
+        .navbar.navbar-dark .breadcrumb .nav-item.active>.nav-link,
+        .navbar.navbar-dark .navbar-nav .nav-item.active>.nav-link {
+            background-color: rgba(255, 255, 255, 0)
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBARNYA GANTI DISINI CHOOOOOOO !-->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark ml-auto bg-ungu">
+
+            <a class="navbar-brand col-md-3" href="./index.html"><img class="img-fluid" src="other/gbr/logo2.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <nav class="collapse navbar-collapse col-md-9 sticky-top" id="navbarSupportedContent">
+                <div class="col-md-8">
+                    <ul class=" navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./index.html">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./profil.html">PROFIL</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="./prodi.html" id="navbardrop" data-toggle="dropdown">
+                                FAKULTAS
+                            </a>
+                            <div class="dropdown-menu ungu">
+                                <a class="dropdown-item" href="#">
+                                    <h6>Fakultas Ilmu Komputer(FIK) </h6>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <h6>Fakutas Sain dan Teknologi(FST)</h6>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <h6>Fakultas Ekonomi dan Sosial(FES)</h6>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./award.html">AWARDS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">PENDAFTARAN</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-md-4 ">
+                    <h5 style="color:white;">Login As :
+                        <a onclick="openForm()"><img src="other/gbr/mhs.png" width="40px" height="40px" alt="Mahasiswa"></a>
+                        <a onclick="openForm()"><img src="other/gbr/dosen.png" width="50px" height="50px" alt="Staff/Dosen"></a></h5>
+
+                    <!-- -->
+                </div>
+
+            </nav>
+
+
+        </nav>
+    </header>
+    <div class="form-popup mr-auto" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <label for="email"><b>Email</b></label><br>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- NAVBARNYA GANTI DISINI CHOOOOOOO !-->
+
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html" style="color: purple">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Award</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="container" style="margin-top: -30px">
+
+        <hr class="my-5">
+
+        <!--Section: Magazine v.1-->
+        <section class="wow fadeIn">
+
+            <!--Section heading-->
+            <h2 class="h1 text-center my-5 font-weight-bold"><i class="fas fa-trophy" style="color: darkorange; text-shadow: 0 0 1px purple;"></i> Award AMIKOM <i class="fas fa-trophy" style="color: darkorange; text-shadow: 0 0 1px purple;"></i></h2>
+
+            <!--Grid row-->
+            <div class="row text-left">
+
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12">
+
+                    <!--Image-->
+                    <div class="view overlay rounded z-depth-1-half mb-3">
+                        <figure class="imghvr-fade-in-right" style="background-color: purple;">
+                            <img src="./images/Post_Webjpg.jpg" alt="example-image">
+                            <figcaption>
+                                <h3 class="ih-fade-down ih-delay-sm ">Battle of Surabaya</h3>
+                                <p class="ih-zoom-in ih-delay-md">
+                                    <i>Menang Best Animation Feature di Hollywood International Moving Pictures Film Festival</i>
+                                </p>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                    </div>
+
+                    <!--Excerpt-->
+                    <div class="news-data">
+                        <a href="" class="light-blue-text">
+                            <h6>
+                                <i class="fas fa-medal"></i>
+                                <strong> Award Terkini</strong>
+                            </h6>
+                        </a>
+                        <p>
+                            <strong>
+                                <i class="far fa-clock"></i> 19/02/2019</strong>
+                        </p>
+                    </div>
+                    <h3>
+
+                        <strong>Battle Of Surabaya kembali raih award</strong>
+
+                    </h3>
+                    <p> Battle of Surabaya (November 10th) memenangkan penghargaan sebagai Best Animation Feature dari Hollywood International Moving Pictures Film Festival (HIMPFF).
+                    </p>
+
+                    <!--/Featured news-->
+
+                    <hr>
+
+                    <!--Small news-->
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <!--Image-->
+                            <div class="view overlay rounded z-depth-1">
+                                <img src="./images/Web_Amikom_04jpg.jpg" class="img-fluid" alt="Minor sample post image">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--Excerpt-->
+                        <div class="col-md-9">
+                            <p class="dark-grey-text">
+                                <strong style="font-size: 12px">13 Oktober 2018</strong>
+                            </p>
+                            <a>Cisco Network Academy Universitas Amikom meraih penghargaan Best of the Best Academy
+                                <i class="fas fa-angle-right float-right"></i>
+
+                            </a>
+
+                        </div>
+
+
+
+                    </div>
+                    <!--/Small news-->
+
+                    <hr>
+
+                    <!--Small news-->
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <!--Image-->
+                            <div class="view overlay rounded z-depth-1">
+                                <img src="./images/Apicta_2017.jpg" class="img-fluid" alt="Minor sample post image">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--Excerpt-->
+                        <div class="col-md-9">
+                            <p class="dark-grey-text">
+                                <strong style="font-size: 12px">20 Desember 2017</strong>
+                            </p>
+                            <a>Gablind dan Fishtron Meraih Penghargaan Merit Award Dalam APICTA 2017 di Bangladesh
+                                <i class="fas fa-angle-right float-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!--/Small news-->
+
+                    <hr>
+
+                    <!--Small news-->
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <!--Image-->
+                            <div class="view overlay rounded z-depth-1">
+                                <img src="./images/Post_Webpng.png" class="img-fluid" alt="Minor sample post image">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--Excerpt-->
+                        <div class="col-md-9">
+                            <p class="dark-grey-text">
+                                <strong style="font-size: 12px">20 Agustus 2018</strong>
+                            </p>
+                            <a>Battle of Surabaya Raih Penghargaan Internasionalnya yang ke 23
+                                <i class="fas fa-angle-right float-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!--/Small news-->
+
+                    <hr>
+
+                    <!--Small news-->
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <!--Image-->
+                            <div class="view overlay rounded z-depth-1">
+                                <img src="./images/Post_Webpng.png" class="img-fluid" alt="Minor sample post image">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--Excerpt-->
+                        <div class="col-md-9">
+                            <p class="dark-grey-text">
+                                <strong style="font-size: 12px">20 Agustus 2018</strong>
+                            </p>
+                            <a>Battle of Surabaya Raih Penghargaan Internasionalnya yang ke 23
+                                <i class="fas fa-angle-right float-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!--/Small news-->
+
+                    <hr>
+
+                    <!--Small news-->
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <!--Image-->
+                            <div class="view overlay rounded z-depth-1">
+                                <img src="./images/Post_Webpng.png" class="img-fluid" alt="Minor sample post image">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--Excerpt-->
+                        <div class="col-md-9">
+                            <p class="dark-grey-text">
+                                <strong style="font-size: 12px">20 Agustus 2018</strong>
+                            </p>
+                            <a>Battle of Surabaya Raih Penghargaan Internasionalnya yang ke 23
+                                <i class="fas fa-angle-right float-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!--/Small news-->
+
+                    <hr>
+
+                    <!--Small news-->
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <!--Image-->
+                            <div class="view overlay rounded z-depth-1">
+                                <img src="./images/Post_Webpng.png" class="img-fluid" alt="Minor sample post image">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--Excerpt-->
+                        <div class="col-md-9">
+                            <p class="dark-grey-text">
+                                <strong style="font-size: 12px">20 Agustus 2018</strong>
+                            </p>
+                            <a>Battle of Surabaya Raih Penghargaan Internasionalnya yang ke 23
+                                <i class="fas fa-angle-right float-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!--/Small news-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12">
+
+                    <!--Image-->
+                    <div class="view overlay rounded z-depth-1-half mb-3">
+                        <figure class="imghvr-fade-in-right" style="background-color: purple;">
+                            <img src="./images/Social_Media_Post_2jpg.jpg" alt="example-image">
+                            <figcaption>
+                                <h3 class="ih-fade-down ih-delay-sm ">AMIKOM Business Park</h3>
+                                <p class="ih-zoom-in ih-delay-md">
+                                    <i>Mendapatkan penghargaan ICSB INDONESIA PRESIDENTIAL AWARD 2018 untuk kategori Researcher dalam Gebyar UKM Indonesia 2018 yang diadakan oleh International Council for Small Business (ICSB) Indonesia dan MarkPlus,</i>
+                                </p>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                    </div>
+
+                    <!--Excerpt-->
+                    <div class="news-data">
+                        <a href="" class="light-blue-text">
+                            <h6>
+                                <i class="fas fa-medal"></i>
+                                <strong> Award Terkini</strong>
+                            </h6>
+                        </a>
+                        <p>
+                            <strong>
+                                <i class="far fa-clock"></i> 12/11/2018</strong>
+                        </p>
+                    </div>
+                    <h3>
+                        <a>
+                            <strong>ABP Mendapatkan penghargaan ICSB</strong>
+                        </a>
+                    </h3>
+                    <p>Amikom Business Park Mendapatkan penghargaan ICSB INDONESIA PRESIDENTIAL AWARD 2018 untuk kategori Researcher dalam Gebyar UKM Indonesia 2018
+                    </p>
+
+                    <!--/Featured news-->
+
+                    <hr>
+
+                    <!--Small news-->
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <!--Image-->
+                            <div class="view overlay rounded z-depth-1">
+                                <img src="./images/Web_Amikom_04jpg.jpg" class="img-fluid" alt="Minor sample post image">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--Excerpt-->
+                        <div class="col-md-9">
+                            <p class="dark-grey-text">
+                                <strong style="font-size: 12px">13 Oktober 2018</strong>
+                            </p>
+                            <a>Cisco Network Academy Universitas Amikom meraih penghargaan Best of the Best Academy
+                                <i class="fas fa-angle-right float-right"></i>
+
+                            </a>
+
+                        </div>
+
+
+
+                    </div>
+                    <!--/Small news-->
+
+                    <hr>
+
+                    <!--Small news-->
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <!--Image-->
+                            <div class="view overlay rounded z-depth-1">
+                                <img src="./images/Apicta_2017.jpg" class="img-fluid" alt="Minor sample post image">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--Excerpt-->
+                        <div class="col-md-9">
+                            <p class="dark-grey-text">
+                                <strong style="font-size: 12px">20 Desember 2017</strong>
+                            </p>
+                            <a>Gablind dan Fishtron Meraih Penghargaan Merit Award Dalam APICTA 2017 di Bangladesh
+                                <i class="fas fa-angle-right float-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!--/Small news-->
+
+                    <hr>
+
+                    <!--Small news-->
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <!--Image-->
+                            <div class="view overlay rounded z-depth-1">
+                                <img src="./images/Post_Webpng.png" class="img-fluid" alt="Minor sample post image">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--Excerpt-->
+                        <div class="col-md-9">
+                            <p class="dark-grey-text">
+                                <strong style="font-size: 12px">20 Agustus 2018</strong>
+                            </p>
+                            <a>Battle of Surabaya Raih Penghargaan Internasionalnya yang ke 23
+                                <i class="fas fa-angle-right float-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!--/Small news-->
+
+                    <hr>
+
+                    <!--Small news-->
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <!--Image-->
+                            <div class="view overlay rounded z-depth-1">
+                                <img src="./images/Post_Webpng.png" class="img-fluid" alt="Minor sample post image">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--Excerpt-->
+                        <div class="col-md-9">
+                            <p class="dark-grey-text">
+                                <strong style="font-size: 12px">20 Agustus 2018</strong>
+                            </p>
+                            <a>Battle of Surabaya Raih Penghargaan Internasionalnya yang ke 23
+                                <i class="fas fa-angle-right float-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!--/Small news-->
+
+                    <hr>
+
+                    <!--Small news-->
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <!--Image-->
+                            <div class="view overlay rounded z-depth-1">
+                                <img src="./images/Post_Webpng.png" class="img-fluid" alt="Minor sample post image">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--Excerpt-->
+                        <div class="col-md-9">
+                            <p class="dark-grey-text">
+                                <strong style="font-size: 12px">20 Agustus 2018</strong>
+                            </p>
+                            <a>Battle of Surabaya Raih Penghargaan Internasionalnya yang ke 23
+                                <i class="fas fa-angle-right float-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!--/Small news-->
+
+                    <hr>
+
+                    <!--Small news-->
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <!--Image-->
+                            <div class="view overlay rounded z-depth-1">
+                                <img src="./images/Post_Webpng.png" class="img-fluid" alt="Minor sample post image">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--Excerpt-->
+                        <div class="col-md-9">
+                            <p class="dark-grey-text">
+                                <strong style="font-size: 12px">20 Agustus 2018</strong>
+                            </p>
+                            <a>Battle of Surabaya Raih Penghargaan Internasionalnya yang ke 23
+                                <i class="fas fa-angle-right float-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <br>
+                    <br>
+                    <!--/Small news-->
+
+
+
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+        </section>
+        <!--/Section: Magazine v.1-->
+
+        <!-- Button trigger modal -->
+        <div class="col text-center">
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalLong" style="text-align: center">
+                Daftar Lengkap AWARD AMIKOM
+            </button>
+        </div>
+        <br>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Full List Award</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 style="text-align: center"> <i class="fas fa-globe"></i> International Award</h2>
+                        <hr>
+                        <ol type="1">
+                            <li><a>Battle of Surabaya (November 10th), Gold Remi Award, Worldfest, Houston, International Film Festival 2016-M.Suyanto, Aryanto Yuniawan, Adi Djayusman, Lukman Chandra, Heri Sulistyo</a></li>
+                            <li><a>Battle of Surabaya (November 10th), Grandprize Winner, SICAF 2016, The 20th Seoul International Cartoon and Animation Festival – M.Suyanto, Aryanto Yuniawan, Adi Djayusman, Lukman Chandra, Heri Sulistyo</a></li>
+                            <li><a>Battle of Surabaya (November 10th), Winner Best Animation, 3th Noida International Film Festival 2016 – M.Suyanto, Aryanto Yuniawan, Adi Djayusman, Lukman Chandra, Heri Sulistyo.</a></li>
+                            <li><a>Gablind, Nominee International ICT Innovative Service Contest, Taiwan, 2016 – Jeki Kuswanto, Eko Rahmat Slamet Hidayat, Arvin C Frobenius</a></li>
+                            <li><a>BSmart, Nominee Asia Pacific ICT Award, Taiwan, 2016 – Elik Hari Muktafin, Budi Sulistiyo Jati, Heriyanto</a></li>
+                            <li><a>Gablind, Nominee Asia Pacific ICT Award, Taiwan, 2016 -Jeki Kuswanto, Eko Rahmat Slamet Hidayat, Arvin C Frobenius</a></li>
+                            <li><a>HICO, Nominee, The use of ICTs in education for disadvantaged groups, UNESCO 2016.-Donni Prabowo, Pendi Ventri Hendika, Bety Wulan Sari</a></li>
+                            <li><a>Ahada, Nominee, The use of ICTs in education for disadvantaged groups, UNESCO 2016 – Donni Prabowo, Afif Bimantara, Bram Pratowo</a></li>
+                            <li><a>BTOUCH, Nominee, The use of ICTs in education for disadvantaged groups, UNESCO 2016.- Elik Hari Muktafin, Budi Sulistiyo Jati, Heriyanto</a></li>
+                            <li><a>Battle of Surabaya (November 10th), Official Selection, Holland Animation Film Festival 2016 – M.Suyanto, Aryanto Yuniawan, Adi Djayusman, Lukman Chandra, Heri Sulistyo.</a></li>
+                            <li><a>Battle of Surabaya (November 10th), Official Selection, Animation Dingle, Ireland 2016 – M.Suyanto, Aryanto Yuniawan, Adi Djayusman, Lukman Chandra, Heri Sulistyo.</a></li>
+                            <li><a>Battle of Surabaya (November 10th), Special Screening, New Chitose Airport Animation Festival Japan, 2016 – M.Suyanto, Aryanto Yuniawan, Adi Djayusman, Lukman Chandra, Heri Sulistyo.</a></li>
+                            <li><a>Battle of Surabaya (November 10th), Special Screening, Athens Animfest, Greece, 2016 – M.Suyanto, Aryanto Yuniawan, Adi Djayusman, Lukman Chandra, Heri Sulistyo.</a></li>
+                            <li><a>HICO, Nominee Asia Pacific ICT Award, Srilangka, 2015 – Donni Prabowo, Pendi Ventri Hendika, Bety Wulan Sari</a></li>
+                            <li><a>BToucht, Nominee Asia Pacific ICT Award, Srilangka, 2015 – Elik Hari Muktafin, Budi Sulistiyo Jati, Heriyanto</a></li>
+                            <li><a>Battle of Surabaya (November 10th), The Faces of Indonesia Cinema Today, 10th Jogja NETPAC Asian Film Festival 2015 – M.Suyanto, Aryanto Yuniawan, Adi Djayusman, Lukman Chandra, Heri Sulistyo.</a></li>
+                            <li><a>Battle of Surabaya (November 10th), Nominated for Best Foreign Animation/Family Trailer Award (2014) – M.Suyanto, Aryanto Yuniawan, Adi Djayusman, Lukman Chandra, Heri Sulistyo</a></li>
+                            <li><a>AHADA, Nominees @ Asia Pacific ICT Alliance (APICTA) Awards, Jakarta 2014 – Donni Prabowo, Afif Bimantara, Bram Pratowo</a></li>
+                            <li><a>Finalist Grand Final Master Overclocking Arena (MOA), Taiwan, 2014 – Christi Roderto R.S</a></li>
+                            <li><a>Winner of Asia-Pasific Class A, Master Overclocking Arena (MOA), Jakarta, 2014 – Christi Roderto R.S</a></li>
+                            <li><a>Winner of International Movie Trailer Festival (IMTF) 2013 – M.Suyanto, Aryanto Yuniawan, Adi Djayusman, Lukman Chandra, Heri Sulistyo</a></li>
+                            <li><a>AHADA, Nominees @ Asia Pacific ICT Alliance (APICTA) Awards,Hongkong 2013 – Donni Prabowo, Afif Bimantara, Bram Pratowo</a></li>
+                            <li><a>SHAND, Nominee International ICT Innovative Service Contest, Taiwan, 2012.- Nuruddin Wiranda, Donni Prabowo, Afif Bimantara</a></li>
+                            <li><a>The Winner of The Best Websites Tourism Promotion Organization Asia Pacific Cities, Beijing, China 2011.</a></li>
+                            <li><a>Nominees @ Asia Pacific ICT Alliance (APICTA) Awards – Arief Setyanto, S.Si, MT</a></li>
+                            <li><a>The Best e-Practice Asia Pacific Economic Digital Opportunity Center Award (ADOC) Award – Arief Setyanto, S.Si, MT</a></li>
+                            <li><a>The Best e-Practice Asia Pacific Economic Digital Opportunity Center Award (ADOC) Award – Kusrini, Dr., M.Kom</a></li>
+                            <li><a>Nominees @ Asia Pacific ICT Alliance (APICTA) Awards – Andi Sunyoto, M.Kom</a></li>
+                            <li><a>Nominees @ Asia Pacific ICT Award Alliance (APICTA) – Hendro Wibowo</a></li>
+                            <li><a>Merit award @ Asia Pacific ICT Alliance (APICTA) Awards – Hanif Al Fatta, M.Kom</a></li>
+                            <li><a>Nominees of Urban Animation International Festival – M. Suyanto, Prof. Dr, M.M. and Aryanto Yuniawan, A.Md</a></li>
+                            <li><a>Merit award @ Asia Pacific ICT Alliance (APICTA) Awards – Arief Setyanto</a></li>
+                            <li><a>The Winner of Oto Web Contest, Sumitomo Corporation 2006 – Jaeni</a></li>
+                            <li><a>The Best e-Practices Asia Pacific Economic Digital Opportunity Center (ADOC) Award,2006 – Kusrini</a></li>
+                            <li><a>The Best e-Practices Asia Pacific Economic Digital Opportunity Center (ADOC) Award,2006 – Arief Setyanto</a></li>
+                            <li><a>Winner ASEAN Development Citra Award -2005, M. Suyanto</a></li>
+                            <li><a>The Winner of Techscape Anniversary Web Contest, 2004 – Jaeni</a></li>
+                        </ol>
+                        <br>
+                        <h2 style="text-align: center"> <i class="fas fa-flag"></i> Nasional Award</h2>
+                        <hr>
+                        <ol type="1">
+                            <li><a>Amikom Business Park (I2TY), The Best Incubator, Indonesia Innovations and Innovators Expo, 2016.</a></li>
+                            <li><a>Winner National Intellectual Property Award 2016-Animator – Aryanto Yuniawan</a></li>
+                            <li><a>HICO, Winner the category of Digital Interactive Media, Indonesia ICT Award 2015 – Donny Prabowo, Bety Wulansari, Pendy Ventri Hendika.</a></li>
+                            <li><a>BTouch, Winner the category of E-Inclusion and Sustanability, Indonesia ICT Award 2015 – Elik Hari Muktafin, Budi Sulistyo Jati, Lusia Suryantoro.</a></li>
+                            <li><a>Winner National Intellectual Property Award 2015-Creative Human in Creative Economy – M. Suyanto</a></li>
+                            <li><a>Integrated University, Winner the category of e-Learning, Indonesia ICT Award 2012 – Jaeni, Donni Prabowo, Afif Bimantara</a></li>
+                            <li><a>Winner the category Digital Entertainment – Animation (Battle of Surabaya), Indonesia ICT Award 2012 – M. Suyanto, Aryanto Yuniawan, Adi Djayusman, Dida Karisma, Budi Setiawan, Endry Setiawan</a></li>
+                            <li><a>Nominator kategori E-Inclution (Shand), Indonesia ICT Award 2012-Nuruddin Wiranda, Afif bimantara, Donni Prabowo</a></li>
+                            <li><a>Nominator kategori Digital Entertainment – Animation (Belajar Di sekolah), Indonesia ICT Award 2012 – M. Suyanto, Aryanto Yuniawan, Adi Djayusman, Dida Karisma, Budi Setiawan, Endry Session</a></li>
+                            <li><a>Nominator kategori Digital Entertainment – Animation (Pohon Pisang), Indonesia ICT Award 2012.- M. Suyanto, Aryanto Yuniawan, Adi Djayusman, Dida Karisma, Budi Setiawan, Endry Setiawan</a></li>
+                            <li><a>Nominator kategori Digital Entertainment – Animation (Layang-layang), Indonesia ICT Award 2012-M. Suyanto, Aryanto Yuniawan, Adi Djayusman, Dida Karisma, Budi Setiawan, Endry Setiawan</a></li>
+                            <li><a>Nominator kategori Digital Entertainment – Animation (Hadiah Kejujuran), Indonesia ICT Award 2012- M. Suyanto, Aryanto Yuniawan, Adi Djayusman, Dida Karisma, Budi Setiawan, Endry Setiawan</a></li>
+                            <li><a>1st Winner Indigo Fellowship Category in Film Animation, “Battle of Surabaya”, by PT Telekomunikasi Indonesia, Tbk. (2012)-M. Suyanto, Aryanto Yuniawan, Adi Djayusman, Dida Karisma, Budi Setiawan, Endry Setiawan</a></li>
+                            <li><a>Nominee Animated Film in Apresiasi Film Indonesia by Art and Film Board of Ministry of Culture and Education of The Republic of Indonesia. (2012)-M. Suyanto, Aryanto Yuniawan, Adi Djayusman, Dida Karisma, Budi Setiawan, Endry Setiawan</a></li>
+                            <li><a>Nomination Top 10 Animafest 2D Short Animated Film MNCTV, “Briptu Dorman”.(2011)-M. Suyanto, Aryanto Yuniawan, Adi Djayusman, Dida Karisma, Budi Setiawan, Endry Setiawan</a></li>
+                            <li><a>Second Winner Award of Digital Animation Cartoon Movie “The Adventure of Abdan – Present of Honesty” Exhibition Indonesian Production – Minister of Industry Republic of Indonesia.(2009)-M. Suyanto, Aryanto Yuniawan, Adi Djayusman, Dida Karisma, Budi Setiawan, Endry Setiawan</a></li>
+                            <li><a>Winner ICT Award Category of Student Project Indonesia ICT Award, 2009 – Hendro Widowo</a></li>
+                            <li><a>The Winner of Telcom Smart Campus Award (TeSCA), 2009, the Platinum for High School – Arief Setyanto, Jaeni</a></li>
+                            <li><a>The Winner of Telcom Smart Campus Award (TeSCA) 2009, the Platinum for Digitalpreneur Incubation – Arief Setyanto, Jaeni</a></li>
+                            <li><a>The Youngest Administration of E-Education Development by Ministry of National Education, 2009 – Jaeni</a></li>
+                            <li><a>Nominee ICT Award Category of Research and Development, Indonesia ICT Award, 2009 – And Sunyoto</a></li>
+                            <li><a>Merit Winner Award ICT Award Category in Digital Animation Inaicta April 2008 – Minister for Communication and Information Technology Republic of Indonesia Award</a></li>
+                            <li><a>Winner Integrated Research Result Award 2008 – Kusrini</a></li>
+                            <li><a>Runner Up Research LIPI Award 2008-Kusrini,</a></li>
+                            <li><a>Winner Top 100 Indonesia Innovation 2008 -Asro Nasiri, Third Ismail</a></li>
+                            <li><a>Finalist Indonesia ICT Award 2008 for TELKOM Smart Campus-Arif Setyanto,</a></li>
+                            <li><a>Nomination Indonesia ICT Award 2008, for Research and Development – Asro Nasiri, Third Ismail</a></li>
+                            <li><a>Asro Nasiri, Nomination ICT Award 2008 for Tools and Infrastructure</a></li>
+                            <li><a>Arif Setyanto, Merit Indonesia ICT Award 2006 for Education and Training</a></li>
+                            <li><a>Hanif Alfatta, Merit Indonesia ICT Award 2006 for Student Project</a></li>
+                            <li><a>Finalist Indonesia Asia Pacific Economic Cooperation Digital Opportunity Center (ADOC) Award 2006-Arif Setyanto,</a></li>
+                            <li><a>Finalist Asia Pacific Economic Cooperation Digital Opportunity Center (ADOC) Award 2006-Kusrini</a></li>
+                            <li><a>Nomination ICT Award 2008 for Tools and Infrastructure – Arif Dwi Laksito</a></li>
+                            <li><a>Nomination ICT Award 2008 for Student Project -Ratno Kustiawan,</a></li>
+                            <li><a>Finalist Indonesia ICT Award 2008 for TELKOM Smart Campus-Madiya Hayati</a></li>
+                            <li><a>Second Winner, Indosat Wireless Internet and Communication, 2006.-Andi Sunyoto,</a></li>
+                            <li><a>Quarter Final, Indonesia Robot Competition 2007-AMIKOM STUDENT</a></li>
+                            <li><a>Gold Medal, Tae Kwon Do, Invitasi Olah Raga Nasional Antar Perguruan Tinggi 2006-Ibnu Majid</a></li>
+                            <li><a>Bronze Medal, Tae Kwon Do, Invitasi Olah Raga Nasional Antar Perguruan Tinggi 2006-Grace J.M. Pattimahu</a></li>
+                            <li><a>Best Speaker, Java Varsities English Debate 2006.-Doni Agustian</a></li>
+                            <li><a>Best Speaker, The 9th Indonesian Varities English Debate “2006”-David Agustriawan and Custiana</a></li>
+                            <li><a>Best Speaker, The 9th Indonesian Varities English Debate “2007”-Mandahadi and Ridwan</a></li>
+                            <li><a>General Winner, XTREME GAMES NATIONAL COMPETITION 2006.-Mayapala Team</a></li>
+                            <li><a>The Best Students Heiper 2007.-David Agustian</a></li>
+                            <li><a>English Speech Contest 2006.-David, Fadya, Doni, Custiana</a></li>
+                            <li><a>Bronze Medal for Feather Class, KEJURDA Tae Kwon Do Se-Yogyakarta 2006-M.Muhyat</a></li>
+                            <li><a>Silver Medal for Light Class, KEJURDA Tae Kwon Do Se-Yogyakarta 2006–Ridwan, C.N.</a></li>
+                            <li><a>Silver Medal for Welter Class, KEJURDA Tae Kwon Do Se-Yogyakarta 2006-Wisnuaji Dwi Putra</a></li>
+                            <li><a>Silver Medal for Heavy Class, KEJURDA Tae Kwon Do Se-Yogyakarta 2006-M. Faizal</a></li>
+                            <li><a>Silver Medal for Featheer Class, KEJURDA Tae Kwon Do Se-Yogyakarta 2006-Retno Dewanti</a></li>
+                            <li><a>Bronze Medal for Welter Class, KEJURDA Tae Kwon Do Se-Jawa Tengah 2006-Handoko</a></li>
+                            <li><a>Bronze Medal for Welter Class, PORDA Tae Kwon Do Se-Jawa Tengah 2005-Handoko</a></li>
+                            <li><a>Silver Medal for Welter Class, PORDA Tae Kwon Do Se-Jawa Tengah 2004-Fadly Syaibani</a></li>
+                            <li><a>Bronze Medal for Welter Class, PORDA Tae Kwon Do Se-Jawa Tengah 2003-Handoko</a></li>
+                            <li><a>Silver Medal for Welter Class, KEJURDA Tae Kwon Do Se-Jawa Tengah 2003-Fadly Syaibani</a></li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <br>
+        </div>
+
+        <br>
+    </div>
+
+    </main>
+
+
+
+
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <h2 style="font-size: 14px; font-weight: 600; margin-left: 200px">Copyright © 2019</h2>
+                <p style="font-size: 13px; margin-left: 200px">UNIVERSITAS AMIKOM YOGYAKARTA<br>All right reserved</p>
+            </div>
+            <div class="col-sm-4">
+                <h2 style="font-size: 14px; font-weight: 600; margin-left: 15px">Menu</h2>
+                <div class="col-md-6">
+                    <ul class="list-unstyled sitemaplink">
+                        <li style="font-size: 13px; margin-right: 40px; color: white; margin: 0 0 5px 0"><a href="#" class="nodecoration">Sitemap</a></li>
+                        <li style="font-size: 13px; margin-right: 40px; color: white; margin: 0 0 5px 0"><a href="#" class="nodecoration">Contact</a></li>
+                        <li style="font-size: 13px; margin-right: 40px; color: white; margin: 0 0 5px 0"><a href="#" class="nodecoration">D3TI</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h2 style="font-size: 14px; font-weight: 600; margin-left: 40px">UNIVERSITAS AMIKOM YOGYAKARTA</h2>
+                <p style="font-size: 13px; margin-left: 40px">Kampus Terpadu : Jl. Ring Road Utara,<br>
+                    Condong Catur, Sleman, Yogyakarta<br>
+
+                    Telp: (0274) 884201 - 207<br>
+
+                    Fax: (0274) 884208 Kodepos: 55283<br>
+
+                    E-Mail: amikom@amikom.ac.id</p>
+                <h2 style="font-size: 14px; font-weight: 600; margin-left: 40px">International Office</h2>
+                <p style="font-size: 13px; margin-left: 40px">Telp: +62 274884 201 Ext. 612<br>
+
+                    Fax: +62 274884 208<br>
+
+                    E-Mail: io@amikom.ac.id</p>
+            </div>
+        </div>
+    </footer>
+    <footer class="container-fluid" style="background-color: #311e54; padding: 1%">
+        <div class="logo-footer">
+            <div class="logo-footer">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <a href="./index.html"><img src="./images/logo-footer-univ.png" alt="" style="margin-left: 195px"></a>
+                    </div>
+                    <div class="col-sm-6 text-right" style="margin-left: 470px; margin-top: -30px">
+                        <div class="social">
+                            <a href="https://www.facebook.com/fleetimee" style="text-decoration: none"><i class="fab fa-facebook-f fa-lg"></i>&nbsp;
+                                <a href="https://twitter.com/Kooongggg" style="text-decoration: none"><i class="fab fa-twitter fa-lg"></i>&nbsp;
+                                    <a href="https://www.instagram.com/kooonggggg/" style="text-decoration: none"><i class="fab fa-instagram fa-lg"></i>&nbsp;
+                                        <a href="https://www.youtube.com/channel/UC_CYJBNLjKMmr9XZ6m3oSpg?view_as=subscriber" style="text-decoration: none"><i class="fab fa-youtube fa-lg"></i>&nbsp;
+                                            <a href="https://steamcommunity.com/id/fleetime/" style="text-decoration: none"><i class="fab fa-steam fa-lg"></i>&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>
