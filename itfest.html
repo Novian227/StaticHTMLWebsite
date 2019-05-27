@@ -275,6 +275,49 @@
             opacity: 1;
         }
 
+        .myButton {
+            -moz-box-shadow: inset 0px 1px 0px 0px #e184f3;
+            -webkit-box-shadow: inset 0px 1px 0px 0px #e184f3;
+            box-shadow: inset 0px 1px 0px 0px #e184f3;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c123de), color-stop(1, #a20dbd));
+            background: -moz-linear-gradient(top, #c123de 5%, #a20dbd 100%);
+            background: -webkit-linear-gradient(top, #c123de 5%, #a20dbd 100%);
+            background: -o-linear-gradient(top, #c123de 5%, #a20dbd 100%);
+            background: -ms-linear-gradient(top, #c123de 5%, #a20dbd 100%);
+            background: linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c123de', endColorstr='#a20dbd', GradientType=0);
+            background-color: #c123de;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px;
+            border: 1px solid #a511c0;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 6px 24px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #9b14b3;
+        }
+
+        .myButton:hover {
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a20dbd), color-stop(1, #c123de));
+            background: -moz-linear-gradient(top, #a20dbd 5%, #c123de 100%);
+            background: -webkit-linear-gradient(top, #a20dbd 5%, #c123de 100%);
+            background: -o-linear-gradient(top, #a20dbd 5%, #c123de 100%);
+            background: -ms-linear-gradient(top, #a20dbd 5%, #c123de 100%);
+            background: linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a20dbd', endColorstr='#c123de', GradientType=0);
+            background-color: #a20dbd;
+        }
+
+        .myButton:active {
+            position: relative;
+            top: 1px;
+        }
+
     </style>
 </head>
 
@@ -291,63 +334,90 @@
 
             <nav class="collapse navbar-collapse col-md-9 sticky-top" id="navbarSupportedContent">
                 <div class="col-md-8">
-                    <ul class=" navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./index.html">HOME <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./profil.html">PROFIL</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                                FAKULTAS
-                            </a>
-                            <div class="dropdown-menu ungu">
-                                <a class="dropdown-item" href="./prodi.html">
-                                    <h6>Fakultas Ilmu Komputer(FIK) </h6>
+                    <h6>
+                        <ul class=" navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./index.html">HOME <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./profil.html">PROFIL</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                    FAKULTAS
                                 </a>
-                                <a class="dropdown-item" href="./prodi.html">
-                                    <h6>Fakutas Sain dan Teknologi(FST)</h6>
-                                </a>
-                                <a class="dropdown-item" href="./prodi.html">
-                                    <h6>Fakultas Ekonomi dan Sosial(FES)</h6>
-                                </a>
-                            </div>
-                        </li>
+                                <div class="dropdown-menu ungu">
+                                    <a class="dropdown-item" href="./prodi.html">
+                                        <h6>Fakultas Ilmu Komputer(FIK) </h6>
+                                    </a>
+                                    <a class="dropdown-item" href="./prodi.html">
+                                        <h6>Fakutas Sain dan Teknologi(FST)</h6>
+                                    </a>
+                                    <a class="dropdown-item" href="./prodi.html">
+                                        <h6>Fakultas Ekonomi dan Sosial(FES)</h6>
+                                    </a>
+                                </div>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="./award.html">AWARDS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">PENDAFTARAN</a>
-                        </li>
-                    </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./award.html">AWARDS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pmb.html">PENDAFTARAN</a>
+                            </li>
+                        </ul>
+                    </h6>
                 </div>
                 <div class=" col-md-4 ">
-                    <h5 style="color:white;">Login As :
-                        <a onclick="openForm()"><img src="other/gbr/mhs.png" width="40px" height="40px" alt="Mahasiswa"></a>
-                        <a onclick="openForm()"><img src="other/gbr/dosen.png" width="50px" height="50px" alt="Staff/Dosen"></a></h5>
+                    <div class="row">
+                        <div class="col-md">
+                            <h5 style="color:white">Login As : </h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="dropdown">
+                                <button type="button" class="btn dropdown-toggle bg-ungu" data-toggle="dropdown">
+                                    <img src="other/gbr/mhs.png" width="40px" height="40px" alt="Mahasiswa">
+                                </button>
+                                <div class="dropdown-menu">
+                                    <form action="/action_page.php" class="form-container">
+                                        <label for="nim"><b>NIM</b></label><br>
+                                        <input type="text" placeholder="Masukkan NIM" name="nim" required>
 
-                    <!-- -->
+                                        <label for="psw"><b>Password</b></label>
+                                        <input type="password" placeholder="Masukkan Password" name="psw" required>
+
+                                        <center><button type="submit" class="myButton">Login</button></center>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="dropdown">
+                                <button type="button" class="btn dropdown-toggle bg-ungu" data-toggle="dropdown">
+                                    <img src="other/gbr/dosen.png" width="40px" height="40px" alt="Staff">
+                                </button>
+                                <div class="dropdown-menu">
+                                    <form action="/action_page.php" class="form-container">
+                                        <label for="nik"><b>NIK</b></label><br>
+                                        <input type="text" placeholder="Masukkan NIK" name="nik" required>
+
+                                        <label for="psw"><b>Password</b></label>
+                                        <input type="password" placeholder="Masukkan Password" name="psw" required>
+
+                                        <center><button type="submit" class="myButton">Login</button></center>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </nav>
 
 
         </nav>
     </header>
-    <div class="form-popup mr-auto" id="myForm">
-        <form action="/action_page.php" class="form-container">
-            <label for="email"><b>Email</b></label><br>
-            <input type="text" placeholder="Enter Email" name="email" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-
-            <button type="submit" class="btn">Login</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-        </form>
-    </div>
     <!-- NAVBARNYA GANTI DISINI CHOOOOOOO !-->
 
     <div class="container">
@@ -503,14 +573,6 @@
 
     <script src="js/sticky-sidebar.min.js"></script>
     <script>
-        function openForm() {
-            document.getElementById("myForm").style.display = "block";
-        }
-
-        function closeForm() {
-            document.getElementById("myForm").style.display = "none";
-        }
-
         var a = new StickySidebar('#sidebar', {
             topSpacing: 20,
             bottomSpacing: 20,
