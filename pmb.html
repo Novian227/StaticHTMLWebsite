@@ -131,15 +131,24 @@
             filter: alpha(opacity=50);
         }
 
+        .sticky.is-sticky {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+
     </style>
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm" style="background-color: #311e54;">
+    <nav class="navbar navbar-expand-sm" data-toggle="sticky-onscroll" style=" background-color: #311e54;">
         <div class="container">
             <div class="col-md-6 ml-auto" style="color: white">
-                <a href=index.html><img src="images/icon-amikom-grey.png"></a> PMB - UNIVERSITAS AMIKOM Yogyakarta </div>
+                <a href=index.html><img src="images/logo-footer-univ.png"></a> </div>
             <div class="col-md-6 mr-auto">
                 <h4 class="cl-oren"><i>"PENERIMAAN MAHASISWA BARU <b>2019/2020</b>" </i></h4>
             </div>
@@ -816,6 +825,39 @@
             <br>
         </div>
 
+        <script>
+            $(document).ready(function() {
+                // Custom 
+                var stickyToggle = function(sticky, stickyWrapper, scrollElement) {
+                    var stickyHeight = sticky.outerHeight();
+                    var stickyTop = stickyWrapper.offset().top;
+                    if (scrollElement.scrollTop() >= stickyTop) {
+                        stickyWrapper.height(stickyHeight);
+                        sticky.addClass("is-sticky");
+                    } else {
+                        sticky.removeClass("is-sticky");
+                        stickyWrapper.height('auto');
+                    }
+                };
+
+                // Find all data-toggle="sticky-onscroll" elements
+                $('[data-toggle="sticky-onscroll"]').each(function() {
+                    var sticky = $(this);
+                    var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+                    sticky.before(stickyWrapper);
+                    sticky.addClass('sticky');
+
+                    // Scroll & resize events
+                    $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function() {
+                        stickyToggle(sticky, stickyWrapper, $(this));
+                    });
+
+                    // On page load
+                    stickyToggle(sticky, stickyWrapper, $(window));
+                });
+            });
+
+        </script>
 
 </body>
 
