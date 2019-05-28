@@ -14,7 +14,7 @@
     <script src="./other/jq/popper.min.js"></script>
     <script src="./other/bootstrap/js/bootstrap.min.js"></script>
 
-    <title>DASHBOARD MAHASISWA</title>
+    <title>DASHBOARD DOSEN</title>
     <link rel="icon" type="image/png" href="other/gbr/ico.png">
     <style>
         #body-row {
@@ -24,7 +24,7 @@
 
         #sidebar-container {
             min-height: 100vh;
-            background-color: #333;
+            background-color: #ff6600;
             padding: 0;
         }
 
@@ -43,6 +43,15 @@
             color: white;
         }
 
+        .bg-orn {
+            background-color: white;
+        }
+
+        .bg-orn:hover {
+            background-color: gray;
+        }
+
+
 
         #sidebar-container .list-group .sidebar-submenu a {
             height: 45px;
@@ -55,17 +64,17 @@
 
 
         .sidebar-separator-title {
-            background-color: #333;
+            background-color: #ff6600;
             height: 35px;
         }
 
         .sidebar-separator {
-            background-color: #333;
+            background-color: #ff6600;
             height: 25px;
         }
 
         .logo-separator {
-            background-color: #333;
+            background-color: #ff6600;
             height: 60px;
         }
 
@@ -92,7 +101,7 @@
 
 <body>
     <!-- Start Sidebar -->
-    <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#ff6600;">
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#333;">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -101,10 +110,10 @@
             <span class="menu-collapsed"></span>
         </a>
         <div class="col-md-7" style="color:white;">
-            <h2> STUDENTS DASHBOARD</h2>
+            <h2> PROFESSORS DASHBOARD</h2>
         </div>
         <div class=" col-md-5 " style="color:white;"><b>
-                <h5>WELCOME !!</h5><img src="./other/gbr/mhs.png" width="50px" height="50px" class="rounded-circle"> Orang Teladan
+                <h5>WELCOME !!</h5><img src="./other/gbr/dosen.png" width="50px" height="50px" class="rounded-circle"> Orang Teladan
             </b></div>
 
 
@@ -130,56 +139,56 @@
         <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
             <ul class="list-group">
                 <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
-                    <small>MAIN MENU</small>
+                    <small style="color: white">MAIN MENU</small>
                 </li>
                 <center>
                     <br>
-                    <img src="./other/gbr/mhs.png" width="150px" height="150px" class="rounded-circle">
-                    <p style="color:white;">Orang Teladan<br>18.99.9999</p>
+                    <img src="./other/gbr/dosen.png" width="150px" height="150px" class="rounded-circle">
+                    <p style="color:white;">Orang Teladan<br>199999999</p>
                     <br>
                 </center>
 
-                <a href="./dsb_mhs.html" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start active">
+                <a href="./dsb_dsn.html" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="fa fa-clipboard fa-fw mr-3"></span>
                         <span class="menu-collapsed text-light">DASHBOARD</span>
-                        <span class="fa fa-circle fa-1x ml-auto"></span>
+                        <span class="fa fa-circle ml-auto"></span>
                     </div>
                 </a>
-                <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
+                <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg bg-orn text-dark list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="bg d-flex w-100 justify-content-start align-items-center">
                         <span class="fa fa-user fa-fw mr-3"></span>
-                        <span class="menu-collapsed">Profile</span>
+                        <span class="menu-collapsed text-dark">Profile</span>
                         <span class="fa fa-angle-right ml-auto"></span>
                     </div>
                 </a>
-                <div id='submenu2' class="collapse sidebar-submenu">
-                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                <div id='submenu2' class="bg-orn collapse sidebar-submenu text-dark">
+                    <a href="#" class="list-group-item list-group-item-action bg-orn text-dark">
                         <span class="menu-collapsed">Settings</span>
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                    <a href="#" class="list-group-item list-group-item-action bg-orn text-dark">
                         <span class="menu-collapsed">Password</span>
                     </a>
                 </div>
-                <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
+                <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-orn list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-start align-items-center text-dark">
                         <span class="fa fa-edit fa-fw mr-3"></span>
                         <span class="menu-collapsed">KULIAH</span>
                         <span class="fa fa-angle-right ml-auto"></span>
                     </div>
                 </a>
                 <div id='submenu1' class="collapse sidebar-submenu">
-                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                        <span class="menu-collapsed">KRS</span>
+                    <a href="#" class="list-group-item list-group-item-action bg-orn text-dark">
+                        <span class="menu-collapsed">MATERI</span>
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                        <span class="menu-collapsed">KHS</span>
+                    <a href="#" class="list-group-item list-group-item-action bg-orn text-dark">
+                        <span class="menu-collapsed">NILAI</span>
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                        <span class="menu-collapsed">TRANSKRIP NILAI</span>
+                    <a href="#" class="list-group-item list-group-item-action bg-orn text-dark">
+                        <span class="menu-collapsed">PENELITIAN</span>
                     </a>
                 </div>
-                <a href="./index.html" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                <a href="./index.html" class="bg-dark list-group-item list-group-item-action flex-column align-items-start ">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="fa fa-power-off fa-fw mr-3"></span>
                         <span class="menu-collapsed text-light">LOG OUT</span>
@@ -199,13 +208,13 @@
             </div><br>
 
             <div class="jumbotron text-center border-secondary p-1">
-                <h6>Status Mahasiswa </h6><br>
+                <h6>Status Dosen </h6><br>
                 <span class="fa fa-check-circle" style="font-size:200px; color:#ff6600;"></span>
                 <br><br>
                 <h4>AKTIF</h4>
             </div>
             <br>
-            <h5> JADWAL KULIAH </h5>
+            <h5> JADWAL MENGAJAR </h5>
             <div class="container">
                 <table class="table table-striped">
                     <thead>
@@ -279,7 +288,7 @@
                 </table>
             </div>
             <br>
-            <h5> JADWAL UJIAN </h5>
+            <h5> JADWAL MENGAWASI UJIAN </h5>
             <div class="container">
                 <table class="table table-striped">
                     <thead>
