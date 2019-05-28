@@ -7,17 +7,28 @@
 
 Ini adalah Tugas Perancangan Web Semester 2 
 
-  - 20 Pages
-  - Memakai Bootstrap 4.0
+  - 20+ Pages
+  - Semoga Responsive
+  
 
 
 ### Tech
 
-Kami menggunakan berbagai software open source untuk membangun web ini
+Kami menggunakan berbagai resources untuk membuat website ini
 
-* [Bootstrap] - great UI boilerplate for modern web apps
+* [Bootstrap] - Great UI boilerplate for modern website
 * [jQuery] -  The Write Less, Do More, JavaScript Library.
 * [FontAwesome] - The iconic SVG, font, and CSS toolkit
+* [imagehover.css] - Pure CSS Image Hover Effect Library
+* [sticky-sidebar.js] - Pure JavaScript plugin for making smart and high performance sticky sidebar
+* [Jssor Slider] - Touch swipe image slider carousel with 200+ slideshow effects
+
+### Team Member
+
+Choirul - Ketua, Planning, Designer
+Novian - Layouting, HostingGithub
+Resa - Mockup
+Rezzha - Content Web
 
 
 
@@ -46,6 +57,9 @@ MIT
    [AngularJS]: <http://angularjs.org>
    [Gulp]: <http://gulpjs.com>
    [FontAwesome]: <https://github.com/FortAwesome/Font-Awesome>
+   [sticky-sidebar]: <https://abouolia.github.io/sticky-sidebar/>
+   [imagehover.css]: <http://imagehover.io/>
+   [Jssor Slider]: <https://www.jssor.com/>
 
    [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
    [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
