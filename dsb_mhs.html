@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./other/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/fa-custom.css">
+    <script src="./other/jq/jquery.min.js"></script>
+    <script src="./other/jq/popper.min.js"></script>
+    <script src="./other/bootstrap/js/bootstrap.min.js"></script>
+
+    <title>DASHBOARD MAHASISWA</title>
+    <link rel="icon" type="image/png" href="other/gbr/ico.png">
+    <style>
+        #body-row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        #sidebar-container {
+            min-height: 100vh;
+            background-color: #333;
+            padding: 0;
+        }
+
+
+        .sidebar-expanded {
+            width: 230px;
+        }
+
+        .sidebar-collapsed {
+            width: 60px;
+        }
+
+
+        #sidebar-container .list-group a {
+            height: 50px;
+            color: white;
+        }
+
+
+        #sidebar-container .list-group .sidebar-submenu a {
+            height: 45px;
+            padding-left: 30px;
+        }
+
+        .sidebar-submenu {
+            font-size: 0.9rem;
+        }
+
+
+        .sidebar-separator-title {
+            background-color: #333;
+            height: 35px;
+        }
+
+        .sidebar-separator {
+            background-color: #333;
+            height: 25px;
+        }
+
+        .logo-separator {
+            background-color: #333;
+            height: 60px;
+        }
+
+
+        #sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+            content: " \f0d7";
+            font-family: FontAwesome;
+            display: inline;
+            text-align: right;
+            padding-left: 10px;
+        }
+
+        #sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+            content: " \f0da";
+            font-family: FontAwesome;
+            display: inline;
+            text-align: right;
+            padding-left: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Start Sidebar -->
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#ff6600;">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="./index.html">
+            <img src="./images/logo_htm.png" width="300" height="80" class="d-inline-block align-top" alt="Logo">
+            <span class="menu-collapsed"></span>
+        </a>
+        <div class="col-md-7" style="color:white;">
+            <h2> STUDENTS DASHBOARD</h2>
+        </div>
+        <div class=" col-md-5 " style="color:white;"><b>
+                <h5>WELCOME !!</h5><img src="./other/gbr/mhs.png" width="50px" height="50px" class="rounded-circle"> Orang Teladan
+            </b></div>
+
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+
+                <li class="nav-item dropdown d-sm-block d-md-none">
+                    <a class="nav-link dropdown-toggle" href="#" id="smallerscreenmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="smallerscreenmenu">
+                        <a class="dropdown-item" href="#">Dashboard</a>
+                        <a class="dropdown-item" href="#">Profile</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="row" id="body-row">
+        <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
+            <ul class="list-group">
+                <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+                    <small>MAIN MENU</small>
+                </li>
+                <center>
+                    <br>
+                    <img src="./other/gbr/mhs.png" width="150px" height="150px" class="rounded-circle">
+                    <p style="color:white;">Orang Teladan<br>18.99.9999</p>
+                    <br>
+                </center>
+
+                <a href="./dsb_mhs.html" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start active">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="fa fa-clipboard fa-fw mr-3"></span>
+                        <span class="menu-collapsed text-light">DASHBOARD</span>
+                        <span class="fa fa-circle fa-1x ml-auto"></span>
+                    </div>
+                </a>
+                <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="fa fa-user fa-fw mr-3"></span>
+                        <span class="menu-collapsed">Profile</span>
+                        <span class="fa fa-angle-right ml-auto"></span>
+                    </div>
+                </a>
+                <div id='submenu2' class="collapse sidebar-submenu">
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                        <span class="menu-collapsed">Settings</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                        <span class="menu-collapsed">Password</span>
+                    </a>
+                </div>
+                <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="fa fa-edit fa-fw mr-3"></span>
+                        <span class="menu-collapsed">KULIAH</span>
+                        <span class="fa fa-angle-right ml-auto"></span>
+                    </div>
+                </a>
+                <div id='submenu1' class="collapse sidebar-submenu">
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                        <span class="menu-collapsed">KRS</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                        <span class="menu-collapsed">KHS</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                        <span class="menu-collapsed">TRANSKRIP NILAI</span>
+                    </a>
+                </div>
+                <a href="./index.html" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start active">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="fa fa-power-off fa-fw mr-3"></span>
+                        <span class="menu-collapsed text-light">LOG OUT</span>
+                        <span class="fa fa-circle-notch ml-auto"></span>
+                    </div>
+                </a>
+
+            </ul>
+        </div> <!-- End Sidebar -->
+
+        <!-- MAIN -->
+        <div class="col">
+            <br>
+            <h5> TAHUN AKADEMIK </h5>
+            <div class="clearfix shadow border border-info">
+                <span class="float-center">Semester-Genap TA. 2018/2019</span>
+            </div><br>
+
+            <div class="jumbotron text-center border-secondary p-1">
+                <h6>Status Mahasiswa </h6><br>
+                <span class="fa fa-check-circle" style="font-size:200px; color:#ff6600;"></span>
+                <br><br>
+                <h4>AKTIF</h4>
+            </div>
+            <br>
+            <h5> JADWAL KULIAH </h5>
+            <div class="container">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>HARI</th>
+                            <th>JAM</th>
+                            <th>RUANG</th>
+                            <th>MATA KULIAH</th>
+                            <th>DOSEN PENGAMPU</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.</td>
+                            <td>SENIN</td>
+                            <td>08.40-10.30</td>
+                            <td>04.03.02</td>
+                            <td>DT057-ALGORITMA PEMROGRAMAN</td>
+                            <td>Ahlihi Masruro, M.Kom</td>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td>SENIN</td>
+                            <td>07.00-08.40</td>
+                            <td>04.03.02</td>
+                            <td>DT057-ALGORITMA PEMROGRAMAN</td>
+                            <td>Ahlihi Masruro, M.Kom</td>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td>SENIN</td>
+                            <td>07.00-08.40</td>
+                            <td>04.03.02</td>
+                            <td>DT057-ALGORITMA PEMROGRAMAN</td>
+                            <td>Ahlihi Masruro, M.Kom</td>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td>SENIN</td>
+                            <td>07.00-08.40</td>
+                            <td>04.03.02</td>
+                            <td>DT057-ALGORITMA PEMROGRAMAN</td>
+                            <td>Ahlihi Masruro, M.Kom</td>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td>SENIN</td>
+                            <td>07.00-08.40</td>
+                            <td>04.03.02</td>
+                            <td>DT057-ALGORITMA PEMROGRAMAN</td>
+                            <td>Ahlihi Masruro, M.Kom</td>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td>SENIN</td>
+                            <td>07.00-08.40</td>
+                            <td>04.03.02</td>
+                            <td>DT057-ALGORITMA PEMROGRAMAN</td>
+                            <td>Ahlihi Masruro, M.Kom</td>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td>SENIN</td>
+                            <td>07.00-08.40</td>
+                            <td>04.03.02</td>
+                            <td>DT057-ALGORITMA PEMROGRAMAN</td>
+                            <td>Ahlihi Masruro, M.Kom</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <h5> JADWAL UJIAN </h5>
+            <div class="container">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>TANGGAL UJIAN</th>
+                            <th>JAM</th>
+                            <th>RUANG</th>
+                            <th>MATA KULIAH</th>
+                            <th>KURSI</th>
+                            <th>KEHADIRAN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.</td>
+                            <td>21-04-2019</td>
+                            <td>08.40-10.30</td>
+                            <td>04.03.02</td>
+                            <td>DT057-ALGORITMA PEMROGRAMAN</td>
+                            <td>36</td>
+                            <td>YA</td>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td>21-04-2019</td>
+                            <td>08.40-10.30</td>
+                            <td>04.03.02</td>
+                            <td>DT057-ALGORITMA PEMROGRAMAN</td>
+                            <td>36</td>
+                            <td>YA</td>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td>21-04-2019</td>
+                            <td>08.40-10.30</td>
+                            <td>04.03.02</td>
+                            <td>DT057-ALGORITMA PEMROGRAMAN</td>
+                            <td>36</td>
+                            <td>YA</td>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td>21-04-2019</td>
+                            <td>08.40-10.30</td>
+                            <td>04.03.02</td>
+                            <td>DT057-ALGORITMA PEMROGRAMAN</td>
+                            <td>36</td>
+                            <td>YA</td>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td>21-04-2019</td>
+                            <td>08.40-10.30</td>
+                            <td>04.03.02</td>
+                            <td>DT057-ALGORITMA PEMROGRAMAN</td>
+                            <td>36</td>
+                            <td>YA</td>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td>21-04-2019</td>
+                            <td>08.40-10.30</td>
+                            <td>04.03.02</td>
+                            <td>DT057-ALGORITMA PEMROGRAMAN</td>
+                            <td>36</td>
+                            <td>YA</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
