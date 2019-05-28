@@ -25,10 +25,10 @@ Kami menggunakan berbagai resources untuk membuat website ini
 
 ### Team Member
 
-Choirul - Ketua, Planning, Designer
-Novian - Layouting, HostingGithub
-Resa - Mockup
-Rezzha - Content Web
+ - Choirul - Ketua, Planning, Designer 
+ - Novian - Layouting, HostingGithub
+ - Resa - Mockup 
+ - Rezzha - Content Web
 
 
 
