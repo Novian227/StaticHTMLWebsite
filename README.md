@@ -57,7 +57,7 @@ MIT
    [AngularJS]: <http://angularjs.org>
    [Gulp]: <http://gulpjs.com>
    [FontAwesome]: <https://github.com/FortAwesome/Font-Awesome>
-   [sticky-sidebar]: <https://abouolia.github.io/sticky-sidebar/>
+   [sticky-sidebar.js]: <https://abouolia.github.io/sticky-sidebar/>
    [imagehover.css]: <http://imagehover.io/>
    [Jssor Slider]: <https://www.jssor.com/>
 
