@@ -486,15 +486,17 @@
     <div class="container">
         <hr>
 
-        <h2><i class="fas fa-calendar-alt"></i> Agenda</h2>
-        <p class="lead">This agenda viewer will let you see multiple events cleanly!</p>
+        <h2><i class="fas fa-calendar-alt"></i> Kalender Event AMIKOM 2019</h2>
+        <p class="lead">Disini mahasiswa dapat melihat event, seminar, workshop yang sedang berlangsung, yang akan datang, <br>maupun yang sudah berlalu.</p>
         <div class="alert alert-warning">
-            <h4>Mobile Support</h4>
-            <p>In order to get the lines between cells looking their best without any
-                JavaScript, I had to use tables for this design. While this could be done
-                in &quot;.row&quot;, doing so will cause issues when displaying the vertical
-                borders between cells, which is a compromise I wasn&apos;t willing to make
-                this time.&apos;</p>
+            <h4>Pengumuman</h4>
+            <p>Bagi yang eventnya belum masuk daftar list ini atau yang ingin mengajukan event silakan hubungi bagian DAAK AMIKOM <br>melalui : | <i class="fas fa-envelope"></i> daak@amikom.ac.id | <i class="fab fa-whatsapp"></i> 087875772974 | <i class="fab fa-discord"></i> <a href="https://discord.gg/6bxTzd">https://discord.gg/6bxTzd</a>
+
+                <br>
+                <br>
+                Kepala DAAK
+                <br>
+                Omegalul Pogchamp</p>
         </div>
         <hr>
         <div class="agenda">
@@ -511,11 +513,39 @@
                         <!-- Single event in a single day -->
                         <tr>
                             <td class="agenda-date" rowspan="1">
+                                <div class="dayofmonth">4</div>
+                                <div class="dayofweek">Sabtu</div>
+                                <div class="shortdate text-muted">Mei, 2019</div>
+                            </td>
+                            <td class="agenda-time">TBA <i class="fas fa-square" style="color: purple"></i></td>
+                            <td class="agenda-events">
+                                <div class="agenda-event"> <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i>
+                                    Seminar Computer Vision 2019 <a href="images/IMG-20190405-WA0005jpg.jpg" <i>(Poster)
+                                        </i></a>
+                                </div>
+                            </td>
+                        </tr> <!-- Multiple events in a single day (note the rowspan) -->
+                        <tr>
+                            <td class="agenda-date" rowspan="1">
+                                <div class="dayofmonth">20</div>
+                                <div class="dayofweek">Sabtu</div>
+                                <div class="shortdate text-muted">April, 2019</div>
+                            </td>
+                            <td class="agenda-time">8.00 - 12.00 <i class="fas fa-square" style="color: red"></i> </td>
+                            <td class="agenda-events">
+                                <div class="agenda-event"> <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i>
+                                    Seminar Prodi Sistem Informasi " Tantangan Ecommerce di Indonesia " <a href="images/PosterECommercepng.png" <i>(Poster)
+                                        </i></a>
+                                </div>
+                            </td>
+                        </tr> <!-- Multiple events in a single day (note the rowspan) -->
+                        <tr>
+                            <td class="agenda-date" rowspan="1">
                                 <div class="dayofmonth">16</div>
                                 <div class="dayofweek">Kamis</div>
                                 <div class="shortdate text-muted">Mei, 2019</div>
                             </td>
-                            <td class="agenda-time">09.00 - Selesai</td>
+                            <td class="agenda-time">09.00 - Selesai <i class="fas fa-square"></i> </td>
                             <td class="agenda-events">
                                 <div class="agenda-event"> <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i>
                                     Seminar Nasional Digital Marketing With Bukalapak <a href="images/posterjpgfinalnyafinalfixjpg.jpg" <i>(Poster)
@@ -529,7 +559,7 @@
                                 <div class="dayofweek">Jumat</div>
                                 <div class="shortdate text-muted">Mei, 2019</div>
                             </td>
-                            <td class="agenda-time">13.20 - 17.00</td>
+                            <td class="agenda-time">13.20 - 17.00 <i class="fas fa-square"></i> </td>
                             <td class="agenda-events">
                                 <div class="agenda-event"> <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i>
                                     Seminar 2D dan 3D Animasi Techno Art "Visual Speak Loader" <a href="images/IMG-20190425-WA0036jpg.jpg" <i>(Poster)</i></a> </div>
@@ -541,97 +571,102 @@
                                 <div class="dayofweek">Senin</div>
                                 <div class="shortdate text-muted">Mei, 2019</div>
                             </td>
-                            <td class="agenda-time">8.00 - 12.00</td>
+                            <td class="agenda-time">8.00 - 12.00 <i class="fas fa-square" style="color: yellow"></i> </td>
                             <td class="agenda-events">
-                                <div class="agenda-event">Workshop Pola Karakter Kelas Dunia</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="agenda-time">13.00 - 15.30</td>
-                            <td class="agenda-events">
-                                <div class="agenda-event">Workshop Struktur Cerita Kelas Dunia</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="agenda-time">15.30 - 17.00</td>
-                            <td class="agenda-events">
-                                <div class="agenda-event">Menulis Skenario Kelas Dunia</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="agenda-date" rowspan="1">
-                                <div class="dayofmonth">20</div>
-                                <div class="dayofweek">Jumat</div>
-                                <div class="shortdate text-muted">Mei, 2019</div>
-                            </td>
-                            <td class="agenda-time">13.20 - 17.00</td>
-                            <td class="agenda-events">
-                                <div class="agenda-event"> <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i>
-                                    Seminar 2D dan 3D Animasi Techno Art "Visual Speak Loader" <a href="images/IMG-20190425-WA0036jpg.jpg" <i>(Poster)</i></a> </div>
-                            </td>
-                        </tr> <!-- Multiple events in a single day (note the rowspan) -->
-                    </tbody>
-                </table>
-            </div><br>
-        </div><br>
-    </div>
-
-
-    <footer class="container-fluid">
-        <div class="row">
-            <div class="col-sm-4">
-                <h2 style="font-size: 14px; font-weight: 600; margin-left: 200px">Copyright © 2019</h2>
-                <p style="font-size: 13px; margin-left: 200px">UNIVERSITAS AMIKOM YOGYAKARTA<br>All right reserved</p>
+                                <div class="agenda-event">Write Locally, Write Globally | " Workshop Pola Karakter Kelas Dunia " <a href="images/PHOTO-2019-04-26-09-52-07jpg.jpg" <i>(Poster)</i></a> </div>
             </div>
-            <div class="col-sm-4">
-                <h2 style="font-size: 14px; font-weight: 600; margin-left: 15px">Menu</h2>
-                <div class="col-md-6">
-                    <ul class="list-unstyled sitemaplink">
-                        <li style="font-size: 13px; margin-right: 40px; color: white; margin: 0 0 5px 0"><a href="#" class="nodecoration">Sitemap</a></li>
-                        <li style="font-size: 13px; margin-right: 40px; color: white; margin: 0 0 5px 0"><a href="./sarana.html" class="nodecoration">Sarana & Prasarana</a></li>
-                        <li style="font-size: 13px; margin-right: 40px; color: white; margin: 0 0 5px 0"><a href="./organisasi.html" class="nodecoration">Struktur Organisasi</a></li>
-                    </ul>
+            </td>
+            </tr>
+            <tr>
+                <td class="agenda-time">13.00 - 15.30 <i class="fas fa-square" style="color: yellow"></i> </td>
+                <td class="agenda-events">
+                    <div class="agenda-event">Write Locally, Write Globally | " Workshop Struktur Cerita Kelas Dunia " <a href="images/PHOTO-2019-04-26-09-52-07jpg.jpg" <i>(Poster)</i></a> </div>
+        </div>
+        </td>
+        </tr>
+        <tr>
+            <td class="agenda-time">15.30 - 17.00 <i class="fas fa-square" style="color: yellow"></i> </td>
+            <td class="agenda-events">
+                <div class="agenda-event">Write Locally, Write Globally | " Workshop Menulis Skenario Kelas Dunia " <a href="images/PHOTO-2019-04-26-09-52-07jpg.jpg" <i>(Poster)</i></a> </div>
+    </div>
+    </td>
+    </tr>
+    <tr>
+        <td class="agenda-date" rowspan="1">
+            <div class="dayofmonth">30</div>
+            <div class="dayofweek">Selasa</div>
+            <div class="shortdate text-muted">Mei, 2019</div>
+        </td>
+        <td class="agenda-time">13.20 - 17.00 <i class="fas fa-square"></i> </td>
+        <td class="agenda-events">
+            <div class="agenda-event"> <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i>
+                Write Locally, Write Globally | " Seminar Local Content to Global Market" <a href="images/PHOTO-2019-04-26-09-52-07jpg.jpg" <i>(Poster)</i></a> </div>
+        </td>
+    </tr> <!-- Multiple events in a single day (note the rowspan) -->
+    </tbody>
+    </table>
+    </div><br>
+    <h5> Keterangan :</h4>
+        <div><i class="fas fa-square"></i> Ruang Cinema | <i class="fas fa-square" style="color: red"></i> Citra 1 | <i class="fas fa-square" style="color: green"></i> Citra 2 | <i class="fas fa-square" style="color: yellow"></i> Kelas International | <i class="fas fa-square" style="color: purple"></i> Basement 4 </div>
+        </div><br>
+        </div>
+
+
+        <footer class=" container-fluid">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h2 style="font-size: 14px; font-weight: 600; margin-left: 200px">Copyright © 2019</h2>
+                    <p style="font-size: 13px; margin-left: 200px">UNIVERSITAS AMIKOM YOGYAKARTA<br>All right reserved</p>
+                </div>
+                <div class="col-sm-4">
+                    <h2 style="font-size: 14px; font-weight: 600; margin-left: 15px">Menu</h2>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled sitemaplink">
+                            <li style="font-size: 13px; margin-right: 40px; color: white; margin: 0 0 5px 0"><a href="#" class="nodecoration">Sitemap</a></li>
+                            <li style="font-size: 13px; margin-right: 40px; color: white; margin: 0 0 5px 0"><a href="./sarana.html" class="nodecoration">Sarana & Prasarana</a></li>
+                            <li style="font-size: 13px; margin-right: 40px; color: white; margin: 0 0 5px 0"><a href="./organisasi.html" class="nodecoration">Struktur Organisasi</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h2 style="font-size: 14px; font-weight: 600; margin-left: 40px">UNIVERSITAS AMIKOM YOGYAKARTA</h2>
+                    <p style="font-size: 13px; margin-left: 40px">Kampus Terpadu : Jl. Ring Road Utara,<br>
+                        Condong Catur, Sleman, Yogyakarta<br>
+
+                        Telp: (0274) 884201 - 207<br>
+
+                        Fax: (0274) 884208 Kodepos: 55283<br>
+
+                        E-Mail: amikom@amikom.ac.id</p>
+                    <h2 style="font-size: 14px; font-weight: 600; margin-left: 40px">International Office</h2>
+                    <p style="font-size: 13px; margin-left: 40px">Telp: +62 274884 201 Ext. 612<br>
+
+                        Fax: +62 274884 208<br>
+
+                        E-Mail: io@amikom.ac.id</p>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <h2 style="font-size: 14px; font-weight: 600; margin-left: 40px">UNIVERSITAS AMIKOM YOGYAKARTA</h2>
-                <p style="font-size: 13px; margin-left: 40px">Kampus Terpadu : Jl. Ring Road Utara,<br>
-                    Condong Catur, Sleman, Yogyakarta<br>
-
-                    Telp: (0274) 884201 - 207<br>
-
-                    Fax: (0274) 884208 Kodepos: 55283<br>
-
-                    E-Mail: amikom@amikom.ac.id</p>
-                <h2 style="font-size: 14px; font-weight: 600; margin-left: 40px">International Office</h2>
-                <p style="font-size: 13px; margin-left: 40px">Telp: +62 274884 201 Ext. 612<br>
-
-                    Fax: +62 274884 208<br>
-
-                    E-Mail: io@amikom.ac.id</p>
-            </div>
-        </div>
-    </footer>
-    <footer class="container-fluid" style="background-color: #311e54; padding: 1%">
-        <div class="logo-footer">
+        </footer>
+        <footer class="container-fluid" style="background-color: #311e54; padding: 1%">
             <div class="logo-footer">
-                <div class="row">
-                    <div class="col-sm-6 text-left">
-                        <a href="./index.html"><img src="./images/logo-footer-univ.png" alt="" style="margin-left: 195px"></a>
-                    </div>
-                    <div class="col-sm-6 text-right" style="margin-left: 470px; margin-top: -30px">
-                        <div class="social">
-                            <a href="https://www.facebook.com/fleetimee" style="text-decoration: none"><i class="fab fa-facebook-f fa-lg"></i>&nbsp;
-                                <a href="https://twitter.com/Kooongggg" style="text-decoration: none"><i class="fab fa-twitter fa-lg"></i>&nbsp;
-                                    <a href="https://www.instagram.com/kooonggggg/" style="text-decoration: none"><i class="fab fa-instagram fa-lg"></i>&nbsp;
-                                        <a href="https://www.youtube.com/channel/UC_CYJBNLjKMmr9XZ6m3oSpg?view_as=subscriber" style="text-decoration: none"><i class="fab fa-youtube fa-lg"></i>&nbsp;
-                                            <a href="https://steamcommunity.com/id/fleetime/" style="text-decoration: none"><i class="fab fa-steam fa-lg"></i>&nbsp;
+                <div class="logo-footer">
+                    <div class="row">
+                        <div class="col-sm-6 text-left">
+                            <a href="./index.html"><img src="./images/logo-footer-univ.png" alt="" style="margin-left: 195px"></a>
+                        </div>
+                        <div class="col-sm-6 text-right" style="margin-left: 470px; margin-top: -30px">
+                            <div class="social">
+                                <a href="https://www.facebook.com/fleetimee" style="text-decoration: none"><i class="fab fa-facebook-f fa-lg"></i>&nbsp;
+                                    <a href="https://twitter.com/Kooongggg" style="text-decoration: none"><i class="fab fa-twitter fa-lg"></i>&nbsp;
+                                        <a href="https://www.instagram.com/kooonggggg/" style="text-decoration: none"><i class="fab fa-instagram fa-lg"></i>&nbsp;
+                                            <a href="https://www.youtube.com/channel/UC_CYJBNLjKMmr9XZ6m3oSpg?view_as=subscriber" style="text-decoration: none"><i class="fab fa-youtube fa-lg"></i>&nbsp;
+                                                <a href="https://steamcommunity.com/id/fleetime/" style="text-decoration: none"><i class="fab fa-steam fa-lg"></i>&nbsp;
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 </body>
 
 </html>
