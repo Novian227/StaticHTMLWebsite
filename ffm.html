@@ -3,52 +3,69 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Sarana & Prasarana</title>
-    <link rel="icon" type="image/png" href="other/gbr/ico.png">
+    <title>Festival Film Mahasiswa Indonesia (FFMI) 2019</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link href="css/all.css" rel="stylesheet">
     <link href="css/navbar.css" rel="stylesheet">
     <link href="css/fa-custom.css" rel="stylesheet">
-    <link href="css/sarana.cs" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+    <link rel="icon" type="image/png" href="other/gbr/ico.png">
+
     <script src="js/popper.min.js"></script>
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/bootstrap.js"></script>
-    <link href="css/imagehover.min.css" rel="stylesheet">
+
     <style>
         body {
             background-color: #cc99ff;
         }
 
         body .container {
-            background-color: #e9ecef;
-        }
-
-        .btn-secondary {
-            background-color: orange;
-            font-weight: 500;
-            border-color: orange;
-        }
-
-        .btn-secondary:hover {
-            background-color: darkorange;
-            border-color: darkorange;
+            background-color: #f2e6ff;
         }
 
 
-        .btn-secondary:not(:disabled):not(.disabled):active,
-        .btn-secondary:not(:disabled):not(.disabled).active,
-        .show>.btn-secondary.dropdown-toggle {
-            background-color: orange;
+        .container {
+            margin: 0 auto;
         }
 
-        .container .dropdown .dropdown-menu a:hover {
-            color: #fff;
-            background-color: orange;
-            border-color: #fff;
+        #content {
+            /*border: 2px solid orange; */
+            padding: 18px;
+            margin-left: 250px;
+            min-height: 1200px;
+            color: darkgrey;
         }
 
+        #sidebar {
+            float: left;
+            width: 245px;
+            color: #ffbdbd;
+            will-change: min-height;
+        }
+
+        #sidebar .sidebar__inner {
+            border: 1px solid orange;
+            padding: 10px;
+            position: relative;
+            transform: translate(0, 0);
+            transform: translate3d(0, 0, 0);
+            will-change: position, transform;
+        }
+
+        .clearfix:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Style the Image Used to Trigger the Modal */
         #myImg {
             border-radius: 5px;
             cursor: pointer;
@@ -83,15 +100,15 @@
             /* Black w/ opacity */
         }
 
-        /* Modal Content (image) */
+        /* Modal Content (Image) */
         .modal-content {
             margin: auto;
             display: block;
-            width: 80%;
-            max-width: 700px;
+            height: auto;
+            max-width: 75%;
         }
 
-        /* Caption of Modal Image */
+        /* Caption of Modal Image (Image Text) - Same Width as the Image */
         #caption {
             margin: auto;
             display: block;
@@ -103,23 +120,11 @@
             height: 150px;
         }
 
-        /* Add Animation */
+        /* Add Animation - Zoom in the Modal */
         .modal-content,
         #caption {
-            -webkit-animation-name: zoom;
-            -webkit-animation-duration: 0.6s;
             animation-name: zoom;
             animation-duration: 0.6s;
-        }
-
-        @-webkit-keyframes zoom {
-            from {
-                -webkit-transform: scale(0)
-            }
-
-            to {
-                -webkit-transform: scale(1)
-            }
         }
 
         @keyframes zoom {
@@ -156,8 +161,6 @@
                 width: 100%;
             }
         }
-
-        /* Navbar style Choirul harus dicopy tiap page */
 
         .bg-ungu {
             background-color: #502763;
@@ -272,17 +275,6 @@
             opacity: 1;
         }
 
-        .jumbotron {
-            background-image: url(images/AMIKOM-Studio-Anm.jpg);
-            background-size: cover;
-            height: 500px;
-        }
-
-        .highlight {
-            color: #333;
-            z-index: 4
-        }
-
         .myButton {
             -moz-box-shadow: inset 0px 1px 0px 0px #e184f3;
             -webkit-box-shadow: inset 0px 1px 0px 0px #e184f3;
@@ -326,12 +318,7 @@
             top: 1px;
         }
 
-        .btn-warning {
-            background-color: darkorange;
-        }
-
     </style>
-
 </head>
 
 <body>
@@ -384,7 +371,7 @@
                 <div class=" col-md-4 ">
                     <div class="row">
                         <div class="col-md">
-                            <h5 style="color:white">Login As : </h5>
+                            <h5 style="color:white;">Login As : </h5>
                         </div>
                     </div>
                     <div class="row">
@@ -437,200 +424,81 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./index.html" style="color: purple">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Sarana & Prasarana</li>
+                <li class="breadcrumb-item"><a href="./berita.html" style="color: purple">Berita</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Festival Film Mahasiswa Indonesia (FFMI) 2019</li>
             </ol>
         </nav>
-    </div>
-
-    <!-- Page Content -->
-    <div class="container" style="margin-top: -10px">
-        <hr>
-
-        <!-- Jumbotron Header -->
-        <header class="jumbotron my-4">
-            <h1 class="display-3" style="color: white; font-weight: bold; margin-top: -70px">Sarana dan Prasarana</h1>
-            <mark class="lead" style="color: black; font-weight: 600">
-                Universitas AMIKOM Yogyakarta memiliki tujuh unit gedung yang dipakai sebagai pusat administrasi, ruang kuliah, laboratorium dan kegiatan mahasiswa.</mark>
-
-        </header>
-
-        <hr>
-
-        <!-- Page Features -->
-        <div class="row text-center">
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                    <figure class="card-img-top imghvr-shutter-in-out-diag-1" style="background-color:#D14233;">
-                        <img src=" images/Pelantikan_KOMAHI_AMIKOM.jpg">
-                        <figcaption>
-                            <i class="fas fa-couch fa-4x"></i>
-                            <h3>Comfy</h3>
-                        </figcaption>
-                    </figure>
-                    <div class="card-body">
-                        <h4 class="card-title">Ruang Kuliah Multimedia</h4>
-                        <p class="card-text">Untuk kenyamanan mahasiswa dalam belajar mengajar, ruang kuliah ber-AC, dan dilengkapi alat pengajaran modern (Multimedia) serta sistem presensi elektronik.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-warning" style="color: white">Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                    <figure class="card-img-top imghvr-shutter-in-out-diag-2" style="background-color:#D14233;">
-                        <img src="images/STMIK-Amikom-3-650x500.jpg">
-                        <figcaption>
-                            <i class="fas fa-network-wired fa-4x"></i>
-                            <h3>High Tech</h3>
-                        </figcaption>
-                    </figure>
-                    <div class="card-body">
-                        <h4 class="card-title">Laboratorium Komputer</h4>
-                        <p class="card-text">Universitas AMIKOM Yogyakarta menyediakan laboratorium komputer
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-warning" style="color: white">Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                    <figure class="card-img-top imghvr-zoom-in" style="background-color:#D14233;">
-                        <img src="images/DSC_0157.jpg">
-                        <figcaption>
-                            <i class="fas fa-book-open fa-4x"></i>
-                            <h3>Wiser</h3>
-                        </figcaption>
-                    </figure>
-                    <div class="card-body">
-                        <h4 class="card-title">Perpustakaan</h4>
-                        <p class="card-text">Universitas AMIKOM Yogyakarta selain menyediakan Perpustakaan dalam bentuk buku, juga menyediakan dalam bentuk CD-ROM.
-
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-warning" style="color: white">Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                    <figure class="card-img-top imghvr-shutter-in-out-vert" style="background-color:#D14233;">
-                        <img src="images/IMG_20160211_102957jpg.jpg">
-                        <figcaption>
-                            <i class="fas fa-film fa-4x"></i>
-                            <h3>Entertainment</h3>
-                        </figcaption>
-                    </figure>
-                    <div class="card-body">
-                        <h4 class="card-title">Ruang Cinema</h4>
-                        <p class="card-text">AMIKOM mempunyai ruang cinema berkelas international seperti bioskop XXI</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-warning" style="color: white">Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-        </div>
-
-        <div class="row text-center">
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                    <figure class="card-img-top imghvr-shutter-in-out-vert" style="background-color:#D14233;">
-                        <img src="images/IMG_6404.jpg">
-                        <figcaption>
-                            <i class="fas fa-hamburger fa-4x"></i>
-                            <h3>Feast</h3>
-                        </figcaption>
-                    </figure>
-                    <div class="card-body">
-                        <h4 class="card-title">Kantin</h4>
-                        <p class="card-text">Disediakan kantin dengan berbagai menu dengan tempat yang nyaman.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-warning" style="color: white">Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                    <figure class="card-img-top imghvr-reveal-right" style="background-color:#D14233;">
-                        <img src="images/citramart.JPG">
-                        <figcaption>
-                            <i class="fas fa-shopping-cart fa-4x"></i>
-                            <h3>Spend</h3>
-                        </figcaption>
-                    </figure>
-                    <div class="card-body">
-                        <h4 class="card-title">Swalayan</h4>
-                        <p class="card-text">Menyediakan kebutuhan mahasiswa.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-warning" style="color: white">Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                    <figure class="card-img-top imghvr-shutter-out-horiz" style="background-color:#D14233;">
-                        <img src="images/masjid.JPG">
-                        <figcaption>
-                            <i class="fas fa-mosque fa-4x"></i>
-                            <h3>Pray</h3>
-                        </figcaption>
-                    </figure>
-                    <div class="card-body">
-                        <h4 class="card-title">Masjid</h4>
-                        <p class="card-text">Disediakan Masjid yang berada di gedung 2 lantai 4.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-warning" style="color: white">Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                    <figure class="card-img-top imghvr-zoom-out-up">
-                        <img src="images/parkir.jpg">
-                        <figcaption>
-                            <i class="fas fa-parking fa-4x"></i>
-                            <h3>Park</h3>
-                        </figcaption>
-                    </figure>
-                    <div class="card-body">
-                        <h4 class="card-title">Parkiran Luas XD</h4>
-                        <p class="card-text">Tersedia lahan parkir mobil dan motor yang luas</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-warning" style="color: white">Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-
-
-
-        </div>
-        <!-- /.row -->
 
     </div>
-    <!-- /.container -->
+
+
+    <div class="container clearfix">
+        <div id="sidebar">
+            <div class="sidebar__inner">
+                <p style="color: #482373; font-size: 25px">Info Kampus</p>
+                <hr>
+                <a href="ikna.html" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Drama Musikal IKNA 2019 #2</p>
+                </a>
+                <a href="ffm.html" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Festival Film Mahasiswa Indonesia (FFMI) 2019</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Recruitment Student Staff Direktorat Perencanaan dan Keuangan (DPK) Universitas Amikom Yogyakarta</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Pengumuman Pendaftaran Wisuda Periode ke - 71</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Pengumuman Penjelasan Wisuda Periode ke - 71</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Recruitment Student Staff Direktorat BPC Universitas Amikom Yogyakarta 2019</p>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <p style="color: cadetblue; font-size: 12px">• Pengumuman Perpanjangan Pendaftaran Beasiswa Mahasiswa Berprestasi 2019</p>
+                </a>
+            </div>
+        </div>
+
+        <div id="content">
+            <h3 style="color: #482373">Festival Film Mahasiswa Indonesia (FFMI) 2019</h3>
+            <i style="margin-left: 3px; color: #757575; font-size: 14px" class="far fa-clock"> 25 Mei 2019. diposting oleh noviana</i>
+            <hr>
+
+
+            <p style="color: #333333; font-size: 14px">Dalam rangka pengembangan kreativitas , minat dan bakat mahasiswa dalam bidang seni khususnya Film, Direktorat Kemahasiswaan, Direktorat Pembelajaran dan Kemahasiswaan, Kementerian Riset, Teknologi dan Pendidikan Tinggi melaksanakan program Festival Film Mahasiswa Indonesia (FFMI) 2019</p>
+
+            <p style="color: #333333; font-size: 14px">
+                <ol>
+                    <li>Tema Film “Indonesia Gemilang”.</li>
+                    <li>Jenis film yang dilombakan adalah Fiksi/Film Pendek dengan durasi 10 menit, berwarna dan bersuara.</li>
+                    <li>Dibuat oleh Organisasi Mahasiswa khususnya UKM dan HIMA.</li>
+                    <li>Pengiriman karya paling lambat tanggal 15 Juni 2019 (cap pos)</li>
+                    <li>Formulir pendafataran dan Panduan lengkap dapata dilihat pada laman : http://ffmi2019.darmajaya.ac.id</li>
+                </ol>
+            </p>
+
+            <p style="color: #333333; font-size: 14px">Yogyakarta, 22 Mei 2019<br>
+                Direktur Kemahasiswaan</p><br>
+
+            <p style="color: #333333; font-size: 14px">Suyatmi</p>
+
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
 
 
     <footer class="container-fluid">
@@ -688,6 +556,41 @@
             </div>
         </div>
     </footer>
+
+
+    <script src="js/sticky-sidebar.min.js"></script>
+    <script>
+        var a = new StickySidebar('#sidebar', {
+            topSpacing: 20,
+            bottomSpacing: 20,
+            containerSelector: '.container',
+            innerWrapperSelector: '.sidebar__inner'
+        });
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+    </script>
+
+
 </body>
 
 </html>
