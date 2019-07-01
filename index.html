@@ -17,6 +17,7 @@
 
     <title>UNIVERSITAS AMIKOM YOGYAKARTA</title>
     <link rel="icon" type="image/png" href="other/gbr/ico.png">
+
     <style>
         body {
             background-color: #cc99ff;
@@ -440,6 +441,19 @@
             }
         }
 
+	@media screen and (max-width:768px)
+				{ /* CSS styles */ 
+					#carouselExampleIndicators{
+					display:none;
+					}
+					#filters{
+					display:none;
+					}
+					#sosmed{
+					margin-left: 10px; 
+					margin-top: -30px
+					}
+				} 
     </style>
 
 </head>
@@ -675,7 +689,7 @@
     </section>
 
     <section id="students">
-        <div class="container">
+        <div class="container" id="filters">
             <div class="row">
                 <div class="col-lg-12 mx-auto text-center mt-5">
                     <h2>Galeri Mahasiswa</h2>
@@ -799,7 +813,7 @@
     </section>
 
 
-    <footer class="container-fluid">
+    <footer class="container-fluid" id="filters">
         <div class="row">
             <div class="col-sm-4">
                 <h2 style="font-size: 14px; font-weight: 600; margin-left: 200px">Copyright © 2019</h2>
@@ -812,6 +826,7 @@
                         <li style="font-size: 13px; margin-right: 40px; color: white; margin: 0 0 5px 0"><a href="#" class="nodecoration">Sitemap</a></li>
                         <li style="font-size: 13px; margin-right: 40px; color: white; margin: 0 0 5px 0"><a href="./sarana.html" class="nodecoration">Sarana & Prasarana</a></li>
                         <li style="font-size: 13px; margin-right: 40px; color: white; margin: 0 0 5px 0"><a href="./organisasi.html" class="nodecoration">Struktur Organisasi</a></li>
+						<li style="font-size: 13px; margin-right: 40px; color: white; margin: 0 0 5px 0"><a href="./pmhmn.html" class="nodecoration">Tim Penyusun</a></li>
                     </ul>
                 </div>
             </div>
@@ -834,15 +849,15 @@
             </div>
         </div>
     </footer>
-    <footer class="container-fluid" style="background-color: #311e54; padding: 1%">
+    <footer class="container-fluid" style="background-color: #311e54; padding: 1%" id="filters">
         <div class="logo-footer">
             <div class="container-fluid logo-footer">
                 <div class="row">
-                    <div class="col-sm-6 text-left">
+                    <div class="col-sm-6 text-left" id="filters">
                         <a href="./index.html"><img src="./images/logo-footer-univ.png" alt="" style="margin-left: 180px"></a>
                     </div>
                     <div class="col-sm-6 text-right" style="margin-left: 470px; margin-top: -30px">
-                        <div class="social">
+                        <div class="social" id="sosmed">
                             <a href="https://www.facebook.com/fleetimee" style="text-decoration: none"><i class="fab fa-facebook-f fa-lg"></i>&nbsp;
                                 <a href="https://twitter.com/Kooongggg" style="text-decoration: none"><i class="fab fa-twitter fa-lg"></i>&nbsp;
                                     <a href="https://www.instagram.com/kooonggggg/" style="text-decoration: none"><i class="fab fa-instagram fa-lg"></i>&nbsp;
