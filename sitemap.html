@@ -3,69 +3,52 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Festival Film Mahasiswa Indonesia (FFMI) 2019</title>
+    <title>Sitemap</title>
+    <link rel="icon" type="image/png" href="other/gbr/ico.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link href="css/all.css" rel="stylesheet">
     <link href="css/navbar.css" rel="stylesheet">
     <link href="css/fa-custom.css" rel="stylesheet">
+    <link href="css/sarana.cs" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
-    <link rel="icon" type="image/png" href="other/gbr/ico.png">
-
     <script src="js/popper.min.js"></script>
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/bootstrap.js"></script>
-
+    <link href="css/imagehover.min.css" rel="stylesheet">
     <style>
         body {
             background-color: #cc99ff;
         }
 
         body .container {
-            background-color: #f2e6ff;
+            background-color: #e9ecef;
+        }
+
+        .btn-secondary {
+            background-color: orange;
+            font-weight: 500;
+            border-color: orange;
+        }
+
+        .btn-secondary:hover {
+            background-color: darkorange;
+            border-color: darkorange;
         }
 
 
-        .container {
-            margin: 0 auto;
+        .btn-secondary:not(:disabled):not(.disabled):active,
+        .btn-secondary:not(:disabled):not(.disabled).active,
+        .show>.btn-secondary.dropdown-toggle {
+            background-color: orange;
         }
 
-        #content {
-            /*border: 2px solid orange; */
-            padding: 18px;
-            margin-left: 250px;
-            min-height: 1200px;
-            color: darkgrey;
+        .container .dropdown .dropdown-menu a:hover {
+            color: #fff;
+            background-color: orange;
+            border-color: #fff;
         }
 
-        #sidebar {
-            float: left;
-            width: 245px;
-            color: #ffbdbd;
-            will-change: min-height;
-        }
-
-        #sidebar .sidebar__inner {
-            border: 1px solid orange;
-            padding: 10px;
-            position: relative;
-            transform: translate(0, 0);
-            transform: translate3d(0, 0, 0);
-            will-change: position, transform;
-        }
-
-        .clearfix:after {
-            display: block;
-            content: "";
-            clear: both;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Style the Image Used to Trigger the Modal */
         #myImg {
             border-radius: 5px;
             cursor: pointer;
@@ -100,15 +83,15 @@
             /* Black w/ opacity */
         }
 
-        /* Modal Content (Image) */
+        /* Modal Content (image) */
         .modal-content {
             margin: auto;
             display: block;
-            height: auto;
-            max-width: 75%;
+            width: 80%;
+            max-width: 700px;
         }
 
-        /* Caption of Modal Image (Image Text) - Same Width as the Image */
+        /* Caption of Modal Image */
         #caption {
             margin: auto;
             display: block;
@@ -120,11 +103,23 @@
             height: 150px;
         }
 
-        /* Add Animation - Zoom in the Modal */
+        /* Add Animation */
         .modal-content,
         #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
             animation-name: zoom;
             animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
         }
 
         @keyframes zoom {
@@ -161,6 +156,8 @@
                 width: 100%;
             }
         }
+
+        /* Navbar style Choirul harus dicopy tiap page */
 
         .bg-ungu {
             background-color: #502763;
@@ -275,6 +272,17 @@
             opacity: 1;
         }
 
+        .jumbotron {
+            background-image: url(images/AMIKOM-Studio-Anm.jpg);
+            background-size: cover;
+            height: 500px;
+        }
+
+        .highlight {
+            color: #333;
+            z-index: 4
+        }
+
         .myButton {
             -moz-box-shadow: inset 0px 1px 0px 0px #e184f3;
             -webkit-box-shadow: inset 0px 1px 0px 0px #e184f3;
@@ -318,7 +326,72 @@
             top: 1px;
         }
 
+        .btn-warning {
+            background-color: darkorange;
+        }
+
+        .tree li {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 5px 0 5px;
+            position: relative
+        }
+
+        .tree li::before,
+        .tree li::after {
+            content: '';
+            left: -20px;
+            position: absolute;
+            right: auto
+        }
+
+        .tree li::before {
+            border-left: 2px solid #000;
+            bottom: 50px;
+            height: 100%;
+            top: 0;
+            width: 1px
+        }
+
+        .tree li::after {
+            border-top: 2px solid #000;
+            height: 20px;
+            top: 25px;
+            width: 25px
+        }
+
+        .tree li span {
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border: 2px solid #000;
+            border-radius: 3px;
+            display: inline-block;
+            padding: 3px 8px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .tree>ul>li::before,
+        .tree>ul>li::after {
+            border: 0
+        }
+
+        .tree li:last-child::before {
+            height: 27px
+        }
+
+        .tree li span:hover {
+            background: darkorange;
+            border: 2px solid #94a0b4;
+        }
+
+        [aria-expanded="false"]>.expanded,
+        [aria-expanded="true"]>.collapsed {
+            display: none;
+        }
+
     </style>
+
 </head>
 
 <body>
@@ -371,7 +444,7 @@
                 <div class=" col-md-4 ">
                     <div class="row">
                         <div class="col-md">
-                            <h5 style="color:white;">Login As : </h5>
+                            <h5 style="color:white">Login As : </h5>
                         </div>
                     </div>
                     <div class="row">
@@ -424,80 +497,116 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./index.html" style="color: purple">Home</a></li>
-                <li class="breadcrumb-item"><a href="./berita.html" style="color: purple">Berita</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Festival Film Mahasiswa Indonesia (FFMI) 2019</li>
+                <li class="breadcrumb-item active" aria-current="page">Sitemap</li>
             </ol>
         </nav>
-
     </div>
 
+    <div class="container" style="margin-top: -10px">
+        <br>
+        <h3 style="text-align: center">Sitemap adalah daftar kumpulan halaman dari website AMIKOM yang dapat diakses oleh pengguna </h3><br>
 
-    <div class="container clearfix">
-        <div id="sidebar">
-            <div class="sidebar__inner">
-                <p style="color: #482373; font-size: 25px">Info Kampus</p>
-                <hr>
-                <a href="ikna.html" style="text-decoration: none">
-                    <p style="color: cadetblue; font-size: 12px">• Drama Musikal IKNA 2019 #2</p>
-                </a>
-                <a href="ffm.html" style="text-decoration: none">
-                    <p style="color: cadetblue; font-size: 12px">• Festival Film Mahasiswa Indonesia (FFMI) 2019</p>
-                </a>
-                <a href="#" style="text-decoration: none">
-                    <p style="color: cadetblue; font-size: 12px">• Recruitment Student Staff Direktorat Perencanaan dan Keuangan (DPK) Universitas Amikom Yogyakarta</p>
-                </a>
-                <a href="#" style="text-decoration: none">
-                    <p style="color: cadetblue; font-size: 12px">• Pengumuman Pendaftaran Wisuda Periode ke - 71</p>
-                </a>
-                <a href="#" style="text-decoration: none">
-                    <p style="color: cadetblue; font-size: 12px">• Pengumuman Penjelasan Wisuda Periode ke - 71</p>
-                </a>
-                <a href="#" style="text-decoration: none">
-                    <p style="color: cadetblue; font-size: 12px">• Recruitment Student Staff Direktorat BPC Universitas Amikom Yogyakarta 2019</p>
-                </a>
-                <a href="#" style="text-decoration: none">
-                    <p style="color: cadetblue; font-size: 12px">• Pengumuman Perpanjangan Pendaftaran Beasiswa Mahasiswa Berprestasi 2019</p>
-                </a>
+        <div class="container" style="margin-top: -10px">
+
+
+            <div class="tree " style="margin-left: 36%">
+                <ul>
+
+                    <li><span><a style="color:#000; text-decoration:none;" href="#Web" aria-expanded="true" aria-controls="Web"><i class="collapsed"><i class="fas fa-folder"></i></i>
+                                <i class="expanded"><i class="fas fa-globe-asia"></i></i> Homepage AMIKOM</a></span>
+                        <div id="Web" class="collapse show">
+                            <ul>
+                                <li><span><i class="far fa-user"></i><a href="profil.html"> Profil</a></span></li>
+                                <li><span><a style="color:#000; text-decoration:none;" data-toggle="collapse" href="#page1" aria-expanded="false" aria-controls="page1"><i class="collapsed"><i class="fas fa-school"></i></i>
+                                            <i class="expanded"><i class="fas fa-school"></i></i> Fakultas</a></span>
+                                    <ul>
+                                        <div id="page1" class="collapse">
+                                            <li><span><i class="fas fa-laptop-code"></i><a href="prodi.html"> Fakultas Ilmu Komputer</a></span></li>
+                                            <li><span><i class="fas fa-microscope"></i><a href="prodi.html"> Fakultas Sains dan Teknologi</a></span></li>
+                                            <li><span><i class="fas fa-comment-dollar"></i><a href="prodi.html"> Fakultas Ekonomi dan Sosial</a></span></li>
+                                        </div>
+                                    </ul>
+                                </li>
+
+
+                                <li><span><a style="color:#000; text-decoration:none;" data-toggle="collapse" href="#Page2" aria-expanded="false" aria-controls="Page2"><i class="collapsed"><i class="fas fa-sign-in-alt"></i></i>
+                                            <i class="expanded"><i class="fas fa-sign-in-alt"></i></i> Login</a></span>
+                                    <ul>
+                                        <div id="Page2" class="collapse">
+                                            <li><span><i class="fas fa-user-secret"></i><a href="dsb_mhs.html"> Login Mahasiswa</a></span></li>
+                                            <li><span><i class="fas fa-user-graduate"></i><a href="dsb_dsn.html"> Login Dosen</a></span></li>
+                                        </div>
+                                    </ul>
+                                </li>
+
+
+                                <li><span><i class="fas fa-award"></i><a href="award.html"> Award</a></span></li>
+
+                                <li><span><i class="fas fa-registered"></i><a href="pmb.html"> Pendaftaran</a></span></li>
+
+                                <li><span><i class="fas fa-users"></i><a href="organisasi.html"> Struktur Organisasi</a></span></li>
+
+                                <li><span><i class="fas fa-calendar-alt"></i><a href="events.html"> Events</a></span></li>
+
+
+                                <li><span><a style="color:#000; text-decoration:none;" data-toggle="collapse" href="#Page2" aria-expanded="false" aria-controls="Page2"><i class="collapsed"><i class="fas fa-folder"></i></i>
+                                            <i class="expanded"><i class="far fa-folder-open"></i></i> Konten</a></span>
+                                    <ul>
+                                        <div id="Page2" class="collapse">
+                                            <li><span><a style="color:#000; text-decoration:none;" data-toggle="collapse" href="#folder1" aria-expanded="false" aria-controls="folder1"><i class="collapsed"><i class="fas fa-folder"></i></i>
+                                                        <i class="expanded"><i class="far fa-folder-open"></i></i> Berita Sidebar</a></span>
+                                                <ul>
+                                                    <div id="folder1" class="collapse">
+                                                        <li><span><i class="far fa-file"></i><a href="ffm.html"> Recruitment Student Staff Direktorat Perencanaan dan Keuangan (DPK) Universitas Amikom Yogyakarta</a></span></li>
+                                                        <li><span><i class="far fa-file"></i><a href="ikna.html"> Drama Musikal IKNA</a></span></li>
+                                                    </div>
+                                                </ul>
+                                            </li>
+
+                                            <li><span><a style="color:#000; text-decoration:none;" data-toggle="collapse" href="#folder2" aria-expanded="false" aria-controls="folder2"><i class="collapsed"><i class="fas fa-folder"></i></i>
+                                                        <i class="expanded"><i class="far fa-folder-open"></i></i> Berita Carousel</a></span>
+                                                <ul>
+                                                    <div id="folder2" class="collapse">
+                                                        <li><span><i class="far fa-file"></i><a href="silat.html"> Pencak Silat Amikom Raih 9 Medali di YKTC 5 2019</a></span></li>
+                                                        <li><span><i class="far fa-file"></i><a href="kunjungan_multimedia.html"> Kunjungan Multimedia University Malaysia</a></span></li>
+                                                        <li><span><i class="far fa-file"></i><a href="mtc.html"> Menatap Turnamen Nasional UKM Taekwondo Latihan di MTC Yogyakarta</a></span></li>
+                                                    </div>
+                                                </ul>
+                                            </li>
+
+                                            <li><span><a style="color:#000; text-decoration:none;" data-toggle="collapse" href="#folder3" aria-expanded="false" aria-controls="folder3"><i class="collapsed"><i class="fas fa-folder"></i></i>
+                                                        <i class="expanded"><i class="far fa-folder-open"></i></i> Berita Halaman Depan</a></span>
+                                                <ul>
+                                                    <div id="folder3" class="collapse">
+                                                        <li><span><i class="far fa-file"></i><a href="hmfi.html"> Berita Acara Upgrading 1 HMIF 2019</a></span></li>
+                                                        <li><span><i class="far fa-file"></i><a href="jobfair.html"> Ribuan Pencari Kerja Ikuti AMIKOM Job Fair</a></span></li>
+                                                        <li><span><i class="far fa-file"></i><a href="sunday.html"> Amikom Sunday's Healthy and Fun</a></span></li>
+                                                        <li><span><i class="far fa-file"></i><a href="doktor.html"> Dosen Amikom Raih Gelar Doktor</a></span></li>
+                                                    </div>
+                                                </ul>
+                                            </li>
+
+                                            <li><span><i class="far fa-file"></i><a href="sitemap.html"> Sitemap</a></span></li>
+                                            <li><span><i class="far fa-file"></i><a href="pmhmn.html"> Tim Penyusun</a></span></li>
+
+                                        </div>
+                                    </ul>
+                                </li>
+
+                                <li><span><i class="fas fa-building"></i><a href="#!"> Sarana dan Prasarana</a></span></li>
+
+
+
+
+
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
             </div>
+            <br>
         </div>
-
-        <div id="content">
-            <h3 style="color: #482373">Festival Film Mahasiswa Indonesia (FFMI) 2019</h3>
-            <i style="margin-left: 3px; color: #757575; font-size: 14px" class="far fa-clock"> 25 Mei 2019. diposting oleh noviana</i>
-            <hr>
-
-
-            <p style="color: #333333; font-size: 14px">Dalam rangka pengembangan kreativitas , minat dan bakat mahasiswa dalam bidang seni khususnya Film, Direktorat Kemahasiswaan, Direktorat Pembelajaran dan Kemahasiswaan, Kementerian Riset, Teknologi dan Pendidikan Tinggi melaksanakan program Festival Film Mahasiswa Indonesia (FFMI) 2019</p>
-
-            <p style="color: #333333; font-size: 14px">
-                <ol>
-                    <li>Tema Film “Indonesia Gemilang”.</li>
-                    <li>Jenis film yang dilombakan adalah Fiksi/Film Pendek dengan durasi 10 menit, berwarna dan bersuara.</li>
-                    <li>Dibuat oleh Organisasi Mahasiswa khususnya UKM dan HIMA.</li>
-                    <li>Pengiriman karya paling lambat tanggal 15 Juni 2019 (cap pos)</li>
-                    <li>Formulir pendafataran dan Panduan lengkap dapata dilihat pada laman : http://ffmi2019.darmajaya.ac.id</li>
-                </ol>
-            </p>
-
-            <p style="color: #333333; font-size: 14px">Yogyakarta, 22 Mei 2019<br>
-                Direktur Kemahasiswaan</p><br>
-
-            <p style="color: #333333; font-size: 14px">Suyatmi</p>
-
-        </div>
-    </div>
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-        <!-- The Close Button -->
-        <span class="close">&times;</span>
-
-        <!-- Modal Content (The Image) -->
-        <img class="modal-content" id="img01">
-
-        <!-- Modal Caption (Image Text) -->
-        <div id="caption"></div>
     </div>
 
 
@@ -556,41 +665,6 @@
             </div>
         </div>
     </footer>
-
-
-    <script src="js/sticky-sidebar.min.js"></script>
-    <script>
-        var a = new StickySidebar('#sidebar', {
-            topSpacing: 20,
-            bottomSpacing: 20,
-            containerSelector: '.container',
-            innerWrapperSelector: '.sidebar__inner'
-        });
-
-        // Get the modal
-        var modal = document.getElementById("myModal");
-
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var img = document.getElementById("myImg");
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-        img.onclick = function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-    </script>
-
-
 </body>
 
 </html>
