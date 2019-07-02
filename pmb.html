@@ -10,9 +10,12 @@
     <link href="css/navbar.css" rel="stylesheet">
     <link href="css/fa-custom.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+    <link href="css/print.min.css" rel="stylesheet">
+    <script src="js/print.min.js"></script>
     <script src="./other/jq/jquery.min.js"></script>
     <script src="./other/jq/popper.min.js"></script>
     <script src="./other/bootstrap/js/bootstrap.min.js"></script>
+
 
     <title>PMB | UNIVERSITAS AMIKOM YOGYAKARTA</title>
     <link rel="icon" type="image/png" href="other/gbr/ico.png">
@@ -503,289 +506,296 @@
                             </div>
                             <div class="modal-body">
                                 <!--Form Pendaftaran-->
-                                <div class="row">
+                                <form method="post" action="#" id="printJS-form">
+                                    <div class="row">
 
-                                    <div class="col-md-6">
-                                        <div class="span6" style="padding-right:10px; border-right: 2px solid #ccc;">
-                                            <legend>Biodata</legend>
-                                            <label for="nama">Nama</label><br>
-                                            <input class="input-large" id="nama" name="nama" type="text" value="" placeholder="Nama Anda"><br>
+                                        <div class="col-md-6">
 
-                                            <label for="noid">Nomor Identitas (KTP)</label><br>
-                                            <div class="input-append input-prepend">
-                                                <!--
+                                            <div class="span6" style="padding-right:10px; border-right: 2px solid #ccc;">
+                                                <legend>Biodata</legend>
+                                                <label for="nama">Nama</label><br>
+                                                <input class="input-large" id="nama" name="nama" type="text" value="" placeholder="Nama Anda"><br>
+
+                                                <label for="noid">Nomor Identitas (KTP)</label><br>
+                                                <div class="input-append input-prepend">
+                                                    <!--
 											<select class="span4" id="jenis_identitas" name="jenis_identitas" >
 																		<option  value="1">KTP</option>
 																		<option  value="2">SIM</option>
 																		<option  value="3">Passport</option>
 																	</select>
 						-->
-                                                <input type="hidden" id="jenis_identitas" name="jenis_identitas" value="1">
-                                                <input class="input-medium" id="noid" name="noid" type="text" value="" placeholder="Nomor Identitas (KTP)">
+                                                    <input type="hidden" id="jenis_identitas" name="jenis_identitas" value="1">
+                                                    <input class="input-medium" id="noid" name="noid" type="text" value="" placeholder="Nomor Identitas (KTP)">
+                                                </div><br>
+
+                                                <label for="tempat_lahir">Kota Kelahiran</label><br>
+                                                <input class="input-medium" id="tempat_lahir" name="tempat_lahir" type="text" value="" placeholder="Tempat Lahir"><br>
+
+                                                <label for="tanggal_lahir">Tanggal Lahir</label><br>
+                                                <input class="input-medium hasDatepicker" name="tanggal_lahir" id="tanggal_lahir" type="text" value="" placeholder="Tanggal Lahir"><br>
+
+                                                <label for="jk">Jenis Kelamin</label><br>
+                                                <select id="jk" name="jk">
+                                                    <option value="">--Jenis Kelamin--</option>
+                                                    <option value="Pria">Laki-Laki</option>
+                                                    <option value="Wanita">Perempuan</option>
+
+                                                </select><br>
+
+                                                <label for="agama">Agama</label><br>
+                                                <select id="agama" name="agama">
+                                                    <option value="">--Pilih Agama--</option>
+                                                    <option value="I">Islam</option>
+                                                    <option value="K">Khatolik</option>
+                                                    <option value="P">Protestan</option>
+                                                    <option value="H">Hindu</option>
+                                                    <option value="B">Budha</option>
+                                                    <option value="L">Lainnya</option>
+
+                                                </select><br>
+
+                                                <label for="kewarganegaraan">Kewarganegaraan</label><br>
+                                                <div class="input-prepend input-append">
+                                                    <select id="kewarganegaraan" name="kewarganegaraan" class="span7">
+                                                        <option value="WNI">WNI</option>
+                                                        <option value="WNA">WNA</option>
+
+                                                    </select>
+                                                    <input id="negara_asal" name="negara_asal" type="text" class="input-medium" placeholder="Negara Asal" value="INDONESIA">
+                                                </div><br>
+
+                                                <label for="alamat">Alamat Asal<br><i>(Cth: Jln Maju-mundur Gg.3A, RT.01/RW.09, Mrican, Depok, Sleman) </i></label> <br>
+                                                <textarea id="alamat" name="alamat" class="textarea"></textarea><br>
+
+                                                <label for="propinsi">Propinsi</label><br>
+                                                <select id="propinsi" name="propinsi">
+                                                    <option value="">--Pilih Propinsi--</option>
+                                                    <option value="1">Nanggroe Aceh Darussalam</option>
+                                                    <option value="2">Sumatera Utara</option>
+                                                    <option value="3">Sumatera Barat</option>
+                                                    <option value="4">Riau</option>
+                                                    <option value="5">Jambi</option>
+                                                    <option value="6">Sumatera Selatan</option>
+                                                    <option value="7">Bengkulu</option>
+                                                    <option value="8">Lampung</option>
+                                                    <option value="9">Bangka Belitung</option>
+                                                    <option value="10">Kepulauan Riau</option>
+                                                    <option value="11">DKI Jakarta</option>
+                                                    <option value="12">Jawa Barat</option>
+                                                    <option value="13">Jawa Tengah</option>
+                                                    <option value="14">Daerah Istimewa Yogyakarta</option>
+                                                    <option value="15">Jawa Timur</option>
+                                                    <option value="16">Banten</option>
+                                                    <option value="17">Bali</option>
+                                                    <option value="18">Nusa Tenggara Barat</option>
+                                                    <option value="19">Nusa Tenggara Timur</option>
+                                                    <option value="20">Kalimantan Barat</option>
+                                                    <option value="21">Kalimantan Tengah</option>
+                                                    <option value="22">Kalimantan Selatan</option>
+                                                    <option value="23">Kalimantan Timur</option>
+                                                    <option value="24">Sulawesi Utara</option>
+                                                    <option value="25">Sulawesi Tengah</option>
+                                                    <option value="26">Sulawesi Selatan</option>
+                                                    <option value="27">Sulawesi Tenggara</option>
+                                                    <option value="28">Gorontalo</option>
+                                                    <option value="29">Maluku</option>
+                                                    <option value="30">Maluku Utara</option>
+                                                    <option value="31">Papua Barat</option>
+                                                    <option value="32">Papua</option>
+                                                    <option value="33">Luar Negeri</option>
+                                                    <option value="34">Sulawesi Barat</option>
+                                                    <option value="38">Kalimantan Utara</option>
+                                                    <option value="99">Lainnya</option>
+
+                                                </select><br>
+
+                                                <br><label for="kodepos">Kodepos</label><br>
+                                                <input class="input-mini" id="kodepos" name="kodepos" type="text" placeholder="Kodepos" value="" maxlength="5">
+                                                <br><br>
+                                                <label for="alamat">Alamat Di Jogja<br><i>(Cth: Jln Maju-mundur Gg.3A, RT.01/RW.09, Mrican, Depok, Sleman) </i></label> <br>
+                                                <textarea id="alamat" name="alamat" class="textarea"></textarea><br>
+                                                <label for="provinsi">Provinsi</label><br>
+                                                <input id="Kos" name="Kos" type="text" class="input-medium" placeholder="Kos" value="YOGYAKARTA"><br>
+                                                <label for="kabupaten">Kabupaten</label><br>
+                                                <select id="kabupaten" name="kabupaten">
+                                                    <option value="">--Pilih Kabupaten--</option>
+                                                    <option value="1401">Kulon Progo</option>
+                                                    <option value="1402">Bantul</option>
+                                                    <option value="1403">Gunung Kidul</option>
+                                                    <option value="1404">Sleman</option>
+                                                    <option value="1405">Kota Yogyakarta</option>
+                                                    <option value="99">Lainnya</option>
+
+                                                </select><br>
+
+                                                <br><label for="kodepos">Kodepos</label><br>
+                                                <input class="input-mini" id="kodepos" name="kodepos" type="text" placeholder="Kodepos" value="" maxlength="5">
+                                                <br><br>
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+                                        <div class="col-md-6">
+
+                                            <legend>Data Orang Tua</legend>
+                                            <label for="nama_ortu">Nama Ibu <em>(sebelum menikah)</em></label><br>
+                                            <input class="input-large" id="nama_ortu" name="nama_ortu" type="text" value="" placeholder="Nama Ibu">
+
+                                            <br><br><br>
+
+                                            <legend>Pendidikan</legend><br>
+                                            <label for="jenjang">Jenjang Pendidikan</label><br>
+                                            <select id="jenjang" name="jenjang">
+                                                <option value="">--Pilih Jenjang Pendidikan--</option>
+                                                <option value="IPA">SMA - IPA</option>
+                                                <option value="IPS">SMA - IPS</option>
+                                                <option value="STM">SMK - IPA</option>
+                                                <option value="SMEA">SMK - IPS</option>
+
+                                            </select><br><br>
+
+                                            <label for="sekolahasal">Sekolah Asal</label><br>
+                                            <input class="input-large" id="sekolahasal" name="sekolahasal" type="text" value="" placeholder="Sekolah Asal Anda"><br><br>
+
+                                            <label for="nem">Rata-Rata NEM</label><br>
+                                            <div class="form-inline">
+                                                <input class="input-tiny" id="nem1" name="nem1" type="text" maxlength="1" value="" placeholder="0" data-original-title="NEM Digit 1" data-content="Inputan harus berupa angka dalam range 0-9."><span>&nbsp;,&nbsp;</span>
+                                                <input class="input-tiny" id="nem2" name="nem2" type="text" maxlength="2" value="" placeholder="00" data-original-title="NEM Digit 2" data-content="Inputan harus berupa angka dalam range 0-99.">
+                                                <br><br>
+                                                <code><br>Bagi yang belum memiliki nilai UN,</code><br><code>silakan inputkan 0 dan 00</code>
                                             </div><br>
 
-                                            <label for="tempat_lahir">Kota Kelahiran</label><br>
-                                            <input class="input-medium" id="tempat_lahir" name="tempat_lahir" type="text" value="" placeholder="Tempat Lahir"><br>
+                                            <br>
+                                            <br><br><br>
 
-                                            <label for="tanggal_lahir">Tanggal Lahir</label><br>
-                                            <input class="input-medium hasDatepicker" name="tanggal_lahir" id="tanggal_lahir" type="text" value="" placeholder="Tanggal Lahir"><br>
+                                            <legend>Pilihan Jurusan di AMIKOM</legend>
+                                            <label for="pilihan1">Pilihan 1</label><br>
+                                            <select id="pilihan1" name="pilihan1">
+                                                <option value="">--Pilih Jenjang Pendidikan dahulu--</option>
+                                                <option value="01">D3-Teknik Informatika</option>
+                                                <option value="02">D3-Manajemen Informatika</option>
+                                                <option value="11">S1-Informatika (Teknik Informatika)</option>
+                                                <option value="12">S1-Sistem Informasi</option>
+                                                <option value="60">S1-Bachelor Information Technology</option>
+                                                <option value="61">S1-Bachelor Informatics</option>
+                                                <option value="62">S1-Bachelor Information System</option>
+                                                <option value="67">S1-Bachelor Communication Science</option>
+                                                <option value="82">S1-Teknologi Informasi</option>
+                                                <option value="83">S1-Teknik Komputer</option>
+                                                <option value="84">S1-Arsitektur</option>
+                                                <option value="85">S1-Geografi</option>
+                                                <option value="86">S1-Perencanaan Wilayah dan Kota</option>
+                                                <option value="91">S1-Ekonomi</option>
+                                                <option value="92">S1-Kewirausahaan</option>
+                                                <option value="93">S1-Akuntansi</option>
+                                                <option value="94">S1-Ilmu Pemerintahan</option>
+                                                <option value="95">S1-Hubungan Internasional</option>
+                                                <option value="96">S1-Ilmu Komunikasi</option>
+                                            </select><br>
 
-                                            <label for="jk">Jenis Kelamin</label><br>
-                                            <select id="jk" name="jk">
-                                                <option value="">--Jenis Kelamin--</option>
-                                                <option value="Pria">Laki-Laki</option>
-                                                <option value="Wanita">Perempuan</option>
+                                            <label for="pilihan2">Pilihan 2</label>
+                                            <select id="pilihan2" name="pilihan2">
+                                                <option value="">--Pilih Pilihan 1 dahulu--</option>
+                                                <option value="01">D3-Teknik Informatika</option>
+                                                <option value="02">D3-Manajemen Informatika</option>
+                                                <option value="11">S1-Informatika (Teknik Informatika)</option>
+                                                <option value="12">S1-Sistem Informasi</option>
+                                                <option value="60">S1-Bachelor Information Technology</option>
+                                                <option value="61">S1-Bachelor Informatics</option>
+                                                <option value="62">S1-Bachelor Information System</option>
+                                                <option value="67">S1-Bachelor Communication Science</option>
+                                                <option value="82">S1-Teknologi Informasi</option>
+                                                <option value="83">S1-Teknik Komputer</option>
+                                                <option value="84">S1-Arsitektur</option>
+                                                <option value="85">S1-Geografi</option>
+                                                <option value="86">S1-Perencanaan Wilayah dan Kota</option>
+                                                <option value="91">S1-Ekonomi</option>
+                                                <option value="92">S1-Kewirausahaan</option>
+                                                <option value="93">S1-Akuntansi</option>
+                                                <option value="94">S1-Ilmu Pemerintahan</option>
+                                                <option value="95">S1-Hubungan Internasional</option>
+                                                <option value="96">S1-Ilmu Komunikasi</option>
+                                            </select><br>
+
+                                            <label for="pilihan3">Pilihan 3</label>
+                                            <select id="pilihan3" name="pilihan3">
+                                                <option value="">--Pilih Pilihan 2 dahulu--</option>
+                                                <option value="01">D3-Teknik Informatika</option>
+                                                <option value="02">D3-Manajemen Informatika</option>
+                                                <option value="11">S1-Informatika (Teknik Informatika)</option>
+                                                <option value="12">S1-Sistem Informasi</option>
+                                                <option value="60">S1-Bachelor Information Technology</option>
+                                                <option value="61">S1-Bachelor Informatics</option>
+                                                <option value="62">S1-Bachelor Information System</option>
+                                                <option value="67">S1-Bachelor Communication Science</option>
+                                                <option value="82">S1-Teknologi Informasi</option>
+                                                <option value="83">S1-Teknik Komputer</option>
+                                                <option value="84">S1-Arsitektur</option>
+                                                <option value="85">S1-Geografi</option>
+                                                <option value="86">S1-Perencanaan Wilayah dan Kota</option>
+                                                <option value="91">S1-Ekonomi</option>
+                                                <option value="92">S1-Kewirausahaan</option>
+                                                <option value="93">S1-Akuntansi</option>
+                                                <option value="94">S1-Ilmu Pemerintahan</option>
+                                                <option value="95">S1-Hubungan Internasional</option>
+                                                <option value="96">S1-Ilmu Komunikasi</option>
+                                            </select><br>
+
+                                            <label for="pilihan4">Pilihan 4</label>
+                                            <select id="pilihan4" name="pilihan4">
+                                                <option value="">--Pilih Pilihan 3 dahulu--</option>
+                                                <option value="01">D3-Teknik Informatika</option>
+                                                <option value="02">D3-Manajemen Informatika</option>
+                                                <option value="11">S1-Informatika (Teknik Informatika)</option>
+                                                <option value="12">S1-Sistem Informasi</option>
+                                                <option value="60">S1-Bachelor Information Technology</option>
+                                                <option value="61">S1-Bachelor Informatics</option>
+                                                <option value="62">S1-Bachelor Information System</option>
+                                                <option value="67">S1-Bachelor Communication Science</option>
+                                                <option value="82">S1-Teknologi Informasi</option>
+                                                <option value="83">S1-Teknik Komputer</option>
+                                                <option value="84">S1-Arsitektur</option>
+                                                <option value="85">S1-Geografi</option>
+                                                <option value="86">S1-Perencanaan Wilayah dan Kota</option>
+                                                <option value="91">S1-Ekonomi</option>
+                                                <option value="92">S1-Kewirausahaan</option>
+                                                <option value="93">S1-Akuntansi</option>
+                                                <option value="94">S1-Ilmu Pemerintahan</option>
+                                                <option value="95">S1-Hubungan Internasional</option>
+                                                <option value="96">S1-Ilmu Komunikasi</option>
+                                            </select><br>
+
+                                            <label for="infodari">Informasi PMB AMIKOM dari</label><br>
+                                            <select id="infodari" name="infodari">
+                                                <option value="">--Pilih asal info pmb--</option>
+                                                <option value="brosur">Brosur</option>
+                                                <option value="internet">Internet</option>
+                                                <option value="tv">Televisi</option>
+                                                <option value="radio">Radio</option>
+                                                <option value="kunjungan">Kunjungan</option>
+                                                <option value="expo">Expo</option>
+                                                <option value="smt">Student Motivation Training</option>
+                                                <option value="teman">Teman</option>
+                                                <option value="saudara">Saudara</option>
+                                                <option value="lainnya">Lainnya</option>
 
                                             </select><br>
 
-                                            <label for="agama">Agama</label><br>
-                                            <select id="agama" name="agama">
-                                                <option value="">--Pilih Agama--</option>
-                                                <option value="I">Islam</option>
-                                                <option value="K">Khatolik</option>
-                                                <option value="P">Protestan</option>
-                                                <option value="H">Hindu</option>
-                                                <option value="B">Budha</option>
-                                                <option value="L">Lainnya</option>
-
-                                            </select><br>
-
-                                            <label for="kewarganegaraan">Kewarganegaraan</label><br>
-                                            <div class="input-prepend input-append">
-                                                <select id="kewarganegaraan" name="kewarganegaraan" class="span7">
-                                                    <option value="WNI">WNI</option>
-                                                    <option value="WNA">WNA</option>
-
-                                                </select>
-                                                <input id="negara_asal" name="negara_asal" type="text" class="input-medium" placeholder="Negara Asal" value="INDONESIA">
-                                            </div><br>
-
-                                            <label for="alamat">Alamat Asal<br><i>(Cth: Jln Maju-mundur Gg.3A, RT.01/RW.09, Mrican, Depok, Sleman) </i></label> <br>
-                                            <textarea id="alamat" name="alamat" class="textarea"></textarea><br>
-
-                                            <label for="propinsi">Propinsi</label><br>
-                                            <select id="propinsi" name="propinsi">
-                                                <option value="">--Pilih Propinsi--</option>
-                                                <option value="1">Nanggroe Aceh Darussalam</option>
-                                                <option value="2">Sumatera Utara</option>
-                                                <option value="3">Sumatera Barat</option>
-                                                <option value="4">Riau</option>
-                                                <option value="5">Jambi</option>
-                                                <option value="6">Sumatera Selatan</option>
-                                                <option value="7">Bengkulu</option>
-                                                <option value="8">Lampung</option>
-                                                <option value="9">Bangka Belitung</option>
-                                                <option value="10">Kepulauan Riau</option>
-                                                <option value="11">DKI Jakarta</option>
-                                                <option value="12">Jawa Barat</option>
-                                                <option value="13">Jawa Tengah</option>
-                                                <option value="14">Daerah Istimewa Yogyakarta</option>
-                                                <option value="15">Jawa Timur</option>
-                                                <option value="16">Banten</option>
-                                                <option value="17">Bali</option>
-                                                <option value="18">Nusa Tenggara Barat</option>
-                                                <option value="19">Nusa Tenggara Timur</option>
-                                                <option value="20">Kalimantan Barat</option>
-                                                <option value="21">Kalimantan Tengah</option>
-                                                <option value="22">Kalimantan Selatan</option>
-                                                <option value="23">Kalimantan Timur</option>
-                                                <option value="24">Sulawesi Utara</option>
-                                                <option value="25">Sulawesi Tengah</option>
-                                                <option value="26">Sulawesi Selatan</option>
-                                                <option value="27">Sulawesi Tenggara</option>
-                                                <option value="28">Gorontalo</option>
-                                                <option value="29">Maluku</option>
-                                                <option value="30">Maluku Utara</option>
-                                                <option value="31">Papua Barat</option>
-                                                <option value="32">Papua</option>
-                                                <option value="33">Luar Negeri</option>
-                                                <option value="34">Sulawesi Barat</option>
-                                                <option value="38">Kalimantan Utara</option>
-                                                <option value="99">Lainnya</option>
-
-                                            </select><br>
-
-                                            <br><label for="kodepos">Kodepos</label><br>
-                                            <input class="input-mini" id="kodepos" name="kodepos" type="text" placeholder="Kodepos" value="" maxlength="5">
-                                            <br><br>
-                                            <label for="alamat">Alamat Di Jogja<br><i>(Cth: Jln Maju-mundur Gg.3A, RT.01/RW.09, Mrican, Depok, Sleman) </i></label> <br>
-                                            <textarea id="alamat" name="alamat" class="textarea"></textarea><br>
-                                            <label for="provinsi">Provinsi</label><br>
-                                            <input id="Kos" name="Kos" type="text" class="input-medium" placeholder="Kos" value="YOGYAKARTA"><br>
-                                            <label for="kabupaten">Kabupaten</label><br>
-                                            <select id="kabupaten" name="kabupaten">
-                                                <option value="">--Pilih Kabupaten--</option>
-                                                <option value="1401">Kulon Progo</option>
-                                                <option value="1402">Bantul</option>
-                                                <option value="1403">Gunung Kidul</option>
-                                                <option value="1404">Sleman</option>
-                                                <option value="1405">Kota Yogyakarta</option>
-                                                <option value="99">Lainnya</option>
-
-                                            </select><br>
-
-                                            <br><label for="kodepos">Kodepos</label><br>
-                                            <input class="input-mini" id="kodepos" name="kodepos" type="text" placeholder="Kodepos" value="" maxlength="5">
-                                            <br><br>
+                                            <hr>
                                         </div>
                                     </div>
-
-
-
-
-
-                                    <div class="col-md-6">
-
-                                        <legend>Data Orang Tua</legend>
-                                        <label for="nama_ortu">Nama Ibu <em>(sebelum menikah)</em></label><br>
-                                        <input class="input-large" id="nama_ortu" name="nama_ortu" type="text" value="" placeholder="Nama Ibu">
-
-                                        <br><br><br>
-
-                                        <legend>Pendidikan</legend><br>
-                                        <label for="jenjang">Jenjang Pendidikan</label><br>
-                                        <select id="jenjang" name="jenjang">
-                                            <option value="">--Pilih Jenjang Pendidikan--</option>
-                                            <option value="IPA">SMA - IPA</option>
-                                            <option value="IPS">SMA - IPS</option>
-                                            <option value="STM">SMK - IPA</option>
-                                            <option value="SMEA">SMK - IPS</option>
-
-                                        </select><br><br>
-
-                                        <label for="sekolahasal">Sekolah Asal</label><br>
-                                        <input class="input-large" id="sekolahasal" name="sekolahasal" type="text" value="" placeholder="Sekolah Asal Anda"><br><br>
-
-                                        <label for="nem">Rata-Rata NEM</label><br>
-                                        <div class="form-inline">
-                                            <input class="input-tiny" id="nem1" name="nem1" type="text" maxlength="1" value="" placeholder="0" data-original-title="NEM Digit 1" data-content="Inputan harus berupa angka dalam range 0-9."><span>&nbsp;,&nbsp;</span>
-                                            <input class="input-tiny" id="nem2" name="nem2" type="text" maxlength="2" value="" placeholder="00" data-original-title="NEM Digit 2" data-content="Inputan harus berupa angka dalam range 0-99.">
-                                            <br><br>
-                                            <code><br>Bagi yang belum memiliki nilai UN,</code><br><code>silakan inputkan 0 dan 00</code>
-                                        </div><br>
-
-                                        <br>
-                                        <br><br><br>
-
-                                        <legend>Pilihan Jurusan di AMIKOM</legend>
-                                        <label for="pilihan1">Pilihan 1</label><br>
-                                        <select id="pilihan1" name="pilihan1">
-                                            <option value="">--Pilih Jenjang Pendidikan dahulu--</option>
-                                            <option value="01">D3-Teknik Informatika</option>
-                                            <option value="02">D3-Manajemen Informatika</option>
-                                            <option value="11">S1-Informatika (Teknik Informatika)</option>
-                                            <option value="12">S1-Sistem Informasi</option>
-                                            <option value="60">S1-Bachelor Information Technology</option>
-                                            <option value="61">S1-Bachelor Informatics</option>
-                                            <option value="62">S1-Bachelor Information System</option>
-                                            <option value="67">S1-Bachelor Communication Science</option>
-                                            <option value="82">S1-Teknologi Informasi</option>
-                                            <option value="83">S1-Teknik Komputer</option>
-                                            <option value="84">S1-Arsitektur</option>
-                                            <option value="85">S1-Geografi</option>
-                                            <option value="86">S1-Perencanaan Wilayah dan Kota</option>
-                                            <option value="91">S1-Ekonomi</option>
-                                            <option value="92">S1-Kewirausahaan</option>
-                                            <option value="93">S1-Akuntansi</option>
-                                            <option value="94">S1-Ilmu Pemerintahan</option>
-                                            <option value="95">S1-Hubungan Internasional</option>
-                                            <option value="96">S1-Ilmu Komunikasi</option>
-                                        </select><br>
-
-                                        <label for="pilihan2">Pilihan 2</label>
-                                        <select id="pilihan2" name="pilihan2">
-                                            <option value="">--Pilih Pilihan 1 dahulu--</option>
-                                            <option value="01">D3-Teknik Informatika</option>
-                                            <option value="02">D3-Manajemen Informatika</option>
-                                            <option value="11">S1-Informatika (Teknik Informatika)</option>
-                                            <option value="12">S1-Sistem Informasi</option>
-                                            <option value="60">S1-Bachelor Information Technology</option>
-                                            <option value="61">S1-Bachelor Informatics</option>
-                                            <option value="62">S1-Bachelor Information System</option>
-                                            <option value="67">S1-Bachelor Communication Science</option>
-                                            <option value="82">S1-Teknologi Informasi</option>
-                                            <option value="83">S1-Teknik Komputer</option>
-                                            <option value="84">S1-Arsitektur</option>
-                                            <option value="85">S1-Geografi</option>
-                                            <option value="86">S1-Perencanaan Wilayah dan Kota</option>
-                                            <option value="91">S1-Ekonomi</option>
-                                            <option value="92">S1-Kewirausahaan</option>
-                                            <option value="93">S1-Akuntansi</option>
-                                            <option value="94">S1-Ilmu Pemerintahan</option>
-                                            <option value="95">S1-Hubungan Internasional</option>
-                                            <option value="96">S1-Ilmu Komunikasi</option>
-                                        </select><br>
-
-                                        <label for="pilihan3">Pilihan 3</label>
-                                        <select id="pilihan3" name="pilihan3">
-                                            <option value="">--Pilih Pilihan 2 dahulu--</option>
-                                            <option value="01">D3-Teknik Informatika</option>
-                                            <option value="02">D3-Manajemen Informatika</option>
-                                            <option value="11">S1-Informatika (Teknik Informatika)</option>
-                                            <option value="12">S1-Sistem Informasi</option>
-                                            <option value="60">S1-Bachelor Information Technology</option>
-                                            <option value="61">S1-Bachelor Informatics</option>
-                                            <option value="62">S1-Bachelor Information System</option>
-                                            <option value="67">S1-Bachelor Communication Science</option>
-                                            <option value="82">S1-Teknologi Informasi</option>
-                                            <option value="83">S1-Teknik Komputer</option>
-                                            <option value="84">S1-Arsitektur</option>
-                                            <option value="85">S1-Geografi</option>
-                                            <option value="86">S1-Perencanaan Wilayah dan Kota</option>
-                                            <option value="91">S1-Ekonomi</option>
-                                            <option value="92">S1-Kewirausahaan</option>
-                                            <option value="93">S1-Akuntansi</option>
-                                            <option value="94">S1-Ilmu Pemerintahan</option>
-                                            <option value="95">S1-Hubungan Internasional</option>
-                                            <option value="96">S1-Ilmu Komunikasi</option>
-                                        </select><br>
-
-                                        <label for="pilihan4">Pilihan 4</label>
-                                        <select id="pilihan4" name="pilihan4">
-                                            <option value="">--Pilih Pilihan 3 dahulu--</option>
-                                            <option value="01">D3-Teknik Informatika</option>
-                                            <option value="02">D3-Manajemen Informatika</option>
-                                            <option value="11">S1-Informatika (Teknik Informatika)</option>
-                                            <option value="12">S1-Sistem Informasi</option>
-                                            <option value="60">S1-Bachelor Information Technology</option>
-                                            <option value="61">S1-Bachelor Informatics</option>
-                                            <option value="62">S1-Bachelor Information System</option>
-                                            <option value="67">S1-Bachelor Communication Science</option>
-                                            <option value="82">S1-Teknologi Informasi</option>
-                                            <option value="83">S1-Teknik Komputer</option>
-                                            <option value="84">S1-Arsitektur</option>
-                                            <option value="85">S1-Geografi</option>
-                                            <option value="86">S1-Perencanaan Wilayah dan Kota</option>
-                                            <option value="91">S1-Ekonomi</option>
-                                            <option value="92">S1-Kewirausahaan</option>
-                                            <option value="93">S1-Akuntansi</option>
-                                            <option value="94">S1-Ilmu Pemerintahan</option>
-                                            <option value="95">S1-Hubungan Internasional</option>
-                                            <option value="96">S1-Ilmu Komunikasi</option>
-                                        </select><br>
-
-                                        <label for="infodari">Informasi PMB AMIKOM dari</label><br>
-                                        <select id="infodari" name="infodari">
-                                            <option value="">--Pilih asal info pmb--</option>
-                                            <option value="brosur">Brosur</option>
-                                            <option value="internet">Internet</option>
-                                            <option value="tv">Televisi</option>
-                                            <option value="radio">Radio</option>
-                                            <option value="kunjungan">Kunjungan</option>
-                                            <option value="expo">Expo</option>
-                                            <option value="smt">Student Motivation Training</option>
-                                            <option value="teman">Teman</option>
-                                            <option value="saudara">Saudara</option>
-                                            <option value="lainnya">Lainnya</option>
-
-                                        </select><br>
-
-                                        <hr>
-                                    </div>
-                                </div>
+                                </form>
                                 <div class="modal-footer">
                                     <button class="btn btn-primary btn-large" type="submit"><i class="icon-file-alt"></i>&nbsp;Daftar</button>
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                    <button type="button" class="btn btn-secondary" onclick="printJS('printJS-form', 'html')">
+                                        Print Form
+                                    </button>
                                 </div>
                             </div>
                         </div>
